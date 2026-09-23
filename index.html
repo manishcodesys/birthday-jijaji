@@ -1,44 +1,668 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birthday Jijaaajii! 🎉</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>
+    Happy Birthday Jijaaajii! 🎉
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link
+    rel="stylesheet"
+    href="style.css">
+
+
+  <!-- EXTRA SURPRISE ANIMATIONS -->
+
+  <style>
+
+    /* ================================
+       SURPRISE REVEAL
+    ================================= */
+
+    .reveal-button {
+
+      border: none;
+      cursor: pointer;
+
+      padding: 18px 28px;
+
+      border-radius: 999px;
+
+      font-family: inherit;
+      font-size: 1.05rem;
+      font-weight: 800;
+
+      background: linear-gradient(
+        135deg,
+        #ff6b9d,
+        #ffb347
+      );
+
+      color: white;
+
+      box-shadow:
+        0 10px 30px rgba(0,0,0,.18);
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+      margin: 20px auto;
+
+      display: block;
+    }
+
+
+    .reveal-button:hover {
+
+      transform:
+        translateY(-5px)
+        scale(1.03);
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    }
+
+
+    .reveal-button:active {
+
+      transform:
+        scale(.95);
+
+    }
+
+
+    /* ================================
+       HIDDEN SURPRISE
+    ================================= */
+
+    .hidden-surprise {
+
+      display: none;
+
+      opacity: 0;
+
+      transform:
+        scale(.7)
+        translateY(30px);
+
+    }
+
+
+    .hidden-surprise.revealed {
+
+      display: block;
+
+      animation:
+        surpriseReveal
+        .8s cubic-bezier(.17,.89,.32,1.28)
+        forwards;
+
+    }
+
+
+    @keyframes surpriseReveal {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          scale(.5)
+          rotate(-5deg)
+          translateY(40px);
+
+      }
+
+      60% {
+
+        opacity: 1;
+
+        transform:
+          scale(1.08)
+          rotate(2deg)
+          translateY(-5px);
+
+      }
+
+      100% {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          rotate(0)
+          translateY(0);
+
+      }
+
+    }
+
+
+    /* ================================
+       BIG SURPRISE TEXT
+    ================================= */
+
+    .surprise-reveal-title {
+
+      font-size:
+        clamp(1.8rem, 5vw, 3rem);
+
+      margin:
+        20px 0 10px;
+
+      animation:
+        popIn
+        .7s ease
+        forwards;
+
+    }
+
+
+    .surprise-reveal-text {
+
+      font-size: 1.15rem;
+
+      margin-bottom: 20px;
+
+    }
+
+
+    @keyframes popIn {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          scale(.2)
+          rotate(-8deg);
+
+      }
+
+      70% {
+
+        transform:
+          scale(1.15)
+          rotate(3deg);
+
+      }
+
+      100% {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          rotate(0);
+
+      }
+
+    }
+
+
+    /* ================================
+       GIFT GRID
+    ================================= */
+
+    .gift-choice-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+
+      margin-top: 25px;
+
+    }
+
+
+    .gift-choice {
+
+      border: none;
+
+      cursor: pointer;
+
+      padding: 25px 18px;
+
+      border-radius: 24px;
+
+      background:
+        rgba(255,255,255,.9);
+
+      color: inherit;
+
+      font-family: inherit;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+
+      transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
+    .gift-choice:hover {
+
+      transform:
+        translateY(-8px)
+        rotate(-1deg);
+
+      box-shadow:
+        0 20px 45px rgba(0,0,0,.2);
+
+    }
+
+
+    .gift-choice:active {
+
+      transform:
+        scale(.94);
+
+    }
+
+
+    .gift-icon {
+
+      font-size: 4rem;
+
+      display: block;
+
+      margin-bottom: 12px;
+
+      animation:
+        gentleFloat
+        2.5s ease-in-out infinite;
+
+    }
+
+
+    @keyframes gentleFloat {
+
+      0%,100% {
+
+        transform:
+          translateY(0);
+
+      }
+
+      50% {
+
+        transform:
+          translateY(-7px);
+
+      }
+
+    }
+
+
+    .gift-number {
+
+      display: inline-block;
+
+      font-size: .75rem;
+
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
+      opacity: .6;
+
+      margin-bottom: 5px;
+
+    }
+
+
+    .gift-choice h3 {
+
+      margin:
+        5px 0;
+
+      font-size:
+        1.25rem;
+
+    }
+
+
+    .gift-choice p {
+
+      margin: 0;
+
+      font-weight: 600;
+
+      opacity: .75;
+
+    }
+
+
+    /* ================================
+       GIFT RESULT
+    ================================= */
+
+    .gift-result {
+
+      display: none;
+
+      margin-top: 30px;
+
+      padding: 25px;
+
+      border-radius: 25px;
+
+      background:
+        rgba(255,255,255,.18);
+
+      backdrop-filter:
+        blur(10px);
+
+      border:
+        1px solid rgba(255,255,255,.3);
+
+    }
+
+
+    .gift-result.show {
+
+      display: block;
+
+      animation:
+        giftBoom
+        .9s cubic-bezier(.17,.89,.32,1.28)
+        forwards;
+
+    }
+
+
+    @keyframes giftBoom {
+
+      0% {
+
+        opacity: 0;
+
+        transform:
+          scale(.2)
+          rotate(-8deg);
+
+      }
+
+      55% {
+
+        opacity: 1;
+
+        transform:
+          scale(1.12)
+          rotate(3deg);
+
+      }
+
+      100% {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          rotate(0);
+
+      }
+
+    }
+
+
+    .gift-result img {
+
+      width: min(450px, 90%);
+
+      max-height: 300px;
+
+      object-fit: cover;
+
+      border-radius: 20px;
+
+      margin-top: 15px;
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+      animation:
+        imageDrop
+        .8s ease
+        .2s both;
+
+    }
+
+
+    @keyframes imageDrop {
+
+      from {
+
+        opacity: 0;
+
+        transform:
+          scale(.6)
+          translateY(-30px);
+
+      }
+
+      to {
+
+        opacity: 1;
+
+        transform:
+          scale(1)
+          translateY(0);
+
+      }
+
+    }
+
+
+    .gift-result h3 {
+
+      font-size:
+        clamp(1.7rem, 5vw, 2.6rem);
+
+      margin:
+        5px 0 10px;
+
+    }
+
+
+    .gift-result p {
+
+      font-size: 1.1rem;
+
+      margin: 5px 0;
+
+    }
+
+
+    /* ================================
+       CONFETTI BURST
+    ================================= */
+
+    .mini-confetti {
+
+      position: fixed;
+
+      top: 50%;
+      left: 50%;
+
+      pointer-events: none;
+
+      z-index: 9999;
+
+      font-size: 2rem;
+
+      animation:
+        confettiFly
+        1.2s
+        ease-out
+        forwards;
+
+    }
+
+
+    @keyframes confettiFly {
+
+      0% {
+
+        opacity: 1;
+
+        transform:
+          translate(-50%,-50%)
+          scale(.5);
+
+      }
+
+      100% {
+
+        opacity: 0;
+
+        transform:
+          translate(
+            calc(-50% + var(--x)),
+            calc(-50% + var(--y))
+          )
+          rotate(720deg)
+          scale(1.2);
+
+      }
+
+    }
+
+
+    /* ================================
+       MOBILE
+    ================================= */
+
+    @media (max-width: 700px) {
+
+      .gift-choice-grid {
+
+        grid-template-columns:
+          1fr;
+
+      }
+
+      .gift-choice {
+
+        padding: 22px;
+
+      }
+
+    }
+
+
+    /* ================================
+       MUSIC BUTTON
+    ================================= */
+
+    #musicToggle {
+
+      position: fixed;
+
+      top: 18px;
+
+      right: 18px;
+
+      z-index: 10000;
+
+      border: none;
+
+      border-radius: 999px;
+
+      padding:
+        10px 16px;
+
+      background:
+        rgba(255,255,255,.9);
+
+      color: #4b2142;
+
+      font-family: inherit;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,.15);
+
+      transition:
+        transform .2s ease;
+
+    }
+
+
+    #musicToggle:hover {
+
+      transform:
+        scale(1.05);
+
+    }
+
+  </style>
+
 </head>
 
 
 <body>
 
+
+  <!-- PARTY ANIMATION -->
+
+  <div
+    id="partyLayer"
+    aria-hidden="true">
+  </div>
+
+
+
   <!-- ================================================= -->
-  <!-- BACKGROUND PARTY ANIMATION -->
+  <!-- MUSIC -->
   <!-- ================================================= -->
 
-  <div id="partyLayer" aria-hidden="true"></div>
+  <audio
+    id="birthdayMusic"
+    preload="auto">
 
+    <source
+      src="assets/birthday-music.wav"
+      type="audio/wav">
 
-  <!-- ================================================= -->
-  <!-- BIRTHDAY MUSIC -->
-  <!-- ================================================= -->
-
-  <audio id="birthdayMusic" preload="auto">
-    <source src="assets/birthday-music.wav" type="audio/wav">
     Your browser does not support the audio element.
+
   </audio>
 
-
-  <!-- ================================================= -->
-  <!-- MUSIC CONTROL -->
-  <!-- ================================================= -->
 
   <button
     id="musicToggle"
@@ -52,29 +676,42 @@
 
 
   <!-- ================================================= -->
-  <!-- HERO / FIRST PAGE -->
+  <!-- HERO -->
   <!-- ================================================= -->
 
   <header class="hero">
 
-    <div class="hero-glow"></div>
+    <div class="hero-glow">
+    </div>
 
 
     <div class="hero-content">
 
+
       <div class="eyebrow">
-        A little birthday surprise made just for you ✨
+
+        A little birthday surprise
+        made just for you ✨
+
       </div>
 
 
       <h1>
+
         Happy Birthday<br>
-        <span>Jijaaajii! 🎂</span>
+
+        <span>
+          Jijaaajii! 🎂
+        </span>
+
       </h1>
 
 
       <p class="hero-sub">
-        Today is all about celebrating the wonderful person you are.
+
+        Today is all about celebrating
+        the wonderful person you are.
+
       </p>
 
 
@@ -96,7 +733,7 @@
 
 
     <!-- ================================================= -->
-    <!-- WISHES SECTION -->
+    <!-- WISHES -->
     <!-- ================================================= -->
 
     <section
@@ -117,7 +754,8 @@
 
 
         <p>
-          A few very important facts about our favourite Jijaji...
+          A few very important facts
+          about our favourite Jijaji...
         </p>
 
       </div>
@@ -126,8 +764,6 @@
 
       <div class="wish-grid">
 
-
-        <!-- WISH 1 -->
 
         <article class="wish-card c1">
 
@@ -154,8 +790,6 @@
 
 
 
-        <!-- WISH 2 -->
-
         <article class="wish-card c2">
 
           <span class="number">
@@ -181,8 +815,6 @@
 
 
 
-        <!-- WISH 3 -->
-
         <article class="wish-card c3">
 
           <span class="number">
@@ -207,8 +839,6 @@
         </article>
 
 
-
-        <!-- WISH 4 -->
 
         <article class="wish-card c4">
 
@@ -237,9 +867,7 @@
 
 
 
-      <!-- ================================================= -->
-      <!-- RAJA CARD -->
-      <!-- ================================================= -->
+      <!-- RAJA -->
 
       <button
         class="raja-card"
@@ -268,13 +896,18 @@
 
 
           <h3>
+
             1 Tamatar Taaza Hai,<br>
-            Jiju Humare Raja Haiii! 👑
+
+            Jiju Humare
+            Raja Haiii! 👑
+
           </h3>
 
 
           <p>
-            Click me for the full royal celebration!
+            Click me for the full
+            royal celebration!
           </p>
 
         </div>
@@ -322,7 +955,7 @@
       <div class="surprise-grid">
 
 
-        <!-- MEMORY BOX -->
+        <!-- MEMORY -->
 
         <button
           class="surprise-box memory"
@@ -351,7 +984,7 @@
 
 
 
-        <!-- RESORT BOX -->
+        <!-- RESORT -->
 
         <button
           class="surprise-box resort"
@@ -373,14 +1006,14 @@
 
 
           <p>
-            Open the plan box →
+            Click to discover the secret →
           </p>
 
         </button>
 
 
 
-        <!-- TREAT BOX -->
+        <!-- TREAT -->
 
         <button
           class="surprise-box treat"
@@ -402,7 +1035,7 @@
 
 
           <p>
-            Click for your options →
+            Click to discover your gift →
           </p>
 
         </button>
@@ -414,7 +1047,7 @@
 
 
     <!-- ================================================= -->
-    <!-- VIDEO SECTION -->
+    <!-- VIDEO -->
     <!-- ================================================= -->
 
     <section
@@ -430,18 +1063,18 @@
 
 
         <h2>
-          And because one surprise is never enough... ❤️
+          And because one surprise
+          is never enough... ❤️
         </h2>
 
 
         <p>
-          We made a little something special for you.
+          We made a little something
+          special for you.
           Sit back, relax and enjoy! 🥳
         </p>
 
 
-
-        <!-- BIRTHDAY VIDEO -->
 
         <video
           controls
@@ -449,17 +1082,22 @@
           preload="metadata"
           width="100%">
 
+
           <source
             src="assets/birthday-video.mp4"
             type="video/mp4">
 
-          Sorry, your browser does not support the video tag.
+
+          Sorry, your browser does not
+          support the video tag.
 
         </video>
 
 
         <p class="video-caption">
+
           🎂 Happy Birthday, Jijaji! 🎉
+
         </p>
 
       </div>
@@ -477,7 +1115,8 @@
   <footer>
 
     <div>
-      Made with lots of love, laughter &amp; thodi si masti ❤️
+      Made with lots of love,
+      laughter &amp; thodi si masti ❤️
     </div>
 
 
@@ -499,7 +1138,8 @@
     onclick="closeOnBackdrop(event, 'rajaModal')">
 
 
-    <div class="modal-content glitter">
+    <div
+      class="modal-content glitter">
 
 
       <button
@@ -512,7 +1152,9 @@
 
 
       <div class="cracker">
+
         🎇 ✨ 🎆 ✨ 🎇
+
       </div>
 
 
@@ -523,19 +1165,29 @@
 
 
       <h2>
+
         1 Tamatar Taaza Hai,<br>
-        Jiju Humare Raja Haiii! 👑
+
+        Jiju Humare
+        Raja Haiii! 👑
+
       </h2>
 
 
       <p>
+
         Royal treatment unlocked.
-        May your year be as शानदार as you are!
+
+        May your year be as
+        शानदार as you are!
+
       </p>
 
 
       <div class="confetti-line">
+
         🎊 🎉 ✨ 🥳 ✨ 🎉 🎊
+
       </div>
 
     </div>
@@ -554,7 +1206,8 @@
     onclick="closeOnBackdrop(event, 'memoryModal')">
 
 
-    <div class="modal-content wide">
+    <div
+      class="modal-content wide">
 
 
       <button
@@ -574,7 +1227,6 @@
       <h2>
         Happy Birthday, dear Jiju! 💛
       </h2>
-
 
 
       <div class="photo-grid">
@@ -602,17 +1254,23 @@
       </div>
 
 
-
       <p class="big-message">
-        May your special day bring you countless happiness,
-        endless joy, and all the success you deserve.
+
+        May your special day bring you
+        countless happiness, endless joy,
+        and all the success you deserve.
+
       </p>
 
 
       <p>
-        Your presence brings so much warmth and positivity
-        to our family. Thank you for always being such a
+
+        Your presence brings so much warmth
+        and positivity to our family.
+
+        Thank you for always being such a
         wonderful human being! ❤️
+
       </p>
 
     </div>
@@ -622,7 +1280,7 @@
 
 
   <!-- ================================================= -->
-  <!-- RESORT MODAL -->
+  <!-- RESORT MODAL - SECRET REVEAL -->
   <!-- ================================================= -->
 
   <div
@@ -631,7 +1289,8 @@
     onclick="closeOnBackdrop(event, 'resortModal')">
 
 
-    <div class="modal-content wide">
+    <div
+      class="modal-content wide">
 
 
       <button
@@ -644,41 +1303,108 @@
 
 
       <span class="section-kicker">
-        SECRET PLAN UNLOCKED 🏝️
+        TOP SECRET 🤫
       </span>
 
 
       <h2>
-        Plan resort trip very very soon! 🌴
+        One Very Important Plan
       </h2>
 
 
       <p class="big-message">
-        We all are waiting. No excuses. 😎
+
+        We have something planned...
+
+        But we're not telling you yet. 👀
+
       </p>
 
 
 
-      <div class="resort-grid">
+      <!-- REVEAL BUTTON -->
+
+      <button
+        class="reveal-button"
+        onclick="revealResort()">
+
+        🕵️ Click Here To Reveal The Plan 👀
+
+      </button>
 
 
-        <img
-          src="assets/resort-1.jpg"
-          alt="Resort">
+
+      <!-- HIDDEN RESORT -->
+
+      <div
+        id="resortReveal"
+        class="hidden-surprise">
 
 
-        <img
-          src="assets/pool-1.jpg"
-          alt="Swimming pool">
+        <div class="cracker">
+
+          🎇 ✨ 🎆 ✨ 🎇
+
+        </div>
+
+
+        <h2
+          class="surprise-reveal-title">
+
+          🎉 SURPRISE! 🎉<br>
+
+          IT'S A RESORT TRIP! 🏝️
+
+        </h2>
+
+
+        <p
+          class="surprise-reveal-text">
+
+          Pack your bags, Raja! 😎<br>
+
+          We're planning a resort trip
+          VERY VERY SOON!
+
+        </p>
+
+
+        <div class="resort-grid">
+
+
+          <img
+            src="assets/resort-1.jpg"
+            alt="Resort">
+
+
+          <img
+            src="assets/pool-1.jpg"
+            alt="Swimming pool">
+
+        </div>
+
+
+        <p class="big-message">
+
+          🏖️ Pool + 🍕 Food + ☀️ Sunshine
+          + 😂 Masti = PERFECT PLAN!
+
+        </p>
+
+
+        <p>
+
+          And yes...
+
+          <strong>
+            YOU ARE COMING. 😎
+          </strong>
+
+          No excuses accepted.
+
+        </p>
 
       </div>
-
-
-
-      <p>
-        Pool, food, sunshine, masti —
-        let's make it happen soon! 🥳
-      </p>
 
     </div>
 
@@ -696,7 +1422,8 @@
     onclick="closeOnBackdrop(event, 'treatModal')">
 
 
-    <div class="modal-content wide">
+    <div
+      class="modal-content wide">
 
 
       <button
@@ -709,84 +1436,130 @@
 
 
       <span class="section-kicker">
-        CHOOSE ONE 🎁
+        TOP SECRET GIFTS 🎁
       </span>
 
 
       <h2>
-        Choose one option for your birthday treat!
+        Choose Your Birthday Gift! 🎁
       </h2>
 
 
       <p>
-        Click any one. Your wish is our command. 😄
+
+        Three gifts are waiting...
+
+        But we're not telling you
+        what's inside. 🤫
+
+      </p>
+
+
+      <p>
+
+        Choose wisely, Jijaji.
+
+        Or don't.
+
+        We're not judging. 😂
+
       </p>
 
 
 
-      <div class="treat-grid">
+      <!-- ================================================= -->
+      <!-- GIFT OPTIONS -->
+      <!-- ================================================= -->
+
+      <div
+        class="gift-choice-grid">
 
 
-        <!-- CAKE -->
+        <!-- GIFT 1 -->
 
-        <button onclick="claimTreat('cake')">
-
-          <img
-            src="assets/cake.jpg"
-            alt="Cake">
+        <button
+          class="gift-choice"
+          onclick="revealGift('cake', this)">
 
 
-          <span>
-            🎂 You have got a Cake!
+          <span class="gift-number">
+            GIFT 01
           </span>
+
+
+          <span class="gift-icon">
+            🎁
+          </span>
+
+
+          <h3>
+            Mystery Gift #1
+          </h3>
+
+
+          <p>
+            Click here to reveal 👀
+          </p>
 
         </button>
 
 
 
-        <!-- PIZZA -->
+        <!-- GIFT 2 -->
 
-        <button onclick="claimTreat('pizza')">
-
-          <img
-            src="assets/pizza.jpg"
-            alt="Pizza">
+        <button
+          class="gift-choice"
+          onclick="revealGift('pizza', this)">
 
 
-          <span>
-
-            🍕 You have got a Pizza!
-
-            <small>
-              Call me with your favourite pizza —
-              I will order.
-            </small>
-
+          <span class="gift-number">
+            GIFT 02
           </span>
+
+
+          <span class="gift-icon">
+            🎁
+          </span>
+
+
+          <h3>
+            Mystery Gift #2
+          </h3>
+
+
+          <p>
+            Click here to reveal 👀
+          </p>
 
         </button>
 
 
 
-        <!-- MILKSHAKE -->
+        <!-- GIFT 3 -->
 
-        <button onclick="claimTreat('shake')">
-
-          <img
-            src="assets/shake.jpg"
-            alt="Milkshake">
+        <button
+          class="gift-choice"
+          onclick="revealGift('shake', this)">
 
 
-          <span>
-
-            🥤 You have got a Milk Shake!
-
-            <small>
-              Call me to order your favourite
-              milk shake.
-            </small>
-
+          <span class="gift-number">
+            GIFT 03
           </span>
+
+
+          <span class="gift-icon">
+            🎁
+          </span>
+
+
+          <h3>
+            Mystery Gift #3
+          </h3>
+
+
+          <p>
+            Click here to reveal 👀
+          </p>
 
         </button>
 
@@ -794,7 +1567,15 @@
 
 
 
-      <div id="treatResult"></div>
+      <!-- ================================================= -->
+      <!-- GIFT RESULT -->
+      <!-- ================================================= -->
+
+      <div
+        id="giftResult"
+        class="gift-result">
+
+      </div>
 
     </div>
 
@@ -803,32 +1584,38 @@
 
 
   <!-- ================================================= -->
-  <!-- MUSIC JAVASCRIPT -->
+  <!-- SURPRISE JAVASCRIPT -->
   <!-- ================================================= -->
 
   <script>
 
+    /* =====================================
+       BIRTHDAY MUSIC
+    ====================================== */
+
     const birthdayMusic =
-      document.getElementById("birthdayMusic");
+      document.getElementById(
+        "birthdayMusic"
+      );
+
 
     const musicToggle =
-      document.getElementById("musicToggle");
+      document.getElementById(
+        "musicToggle"
+      );
 
 
     let musicStarted = false;
 
 
 
-    /*
-      Start birthday music when the visitor
-      clicks the first celebration button.
-    */
-
     function startBirthday() {
 
       birthdayMusic.volume = 0.35;
 
-      birthdayMusic.play()
+
+      birthdayMusic
+        .play()
         .then(() => {
 
           musicStarted = true;
@@ -837,11 +1624,10 @@
             "🎵 Music ON";
 
         })
-        .catch((error) => {
+        .catch(() => {
 
           console.log(
-            "Music could not start:",
-            error
+            "Music could not start."
           );
 
         });
@@ -857,29 +1643,20 @@
 
 
 
-    /*
-      Music ON / OFF button
-    */
-
     function toggleMusic() {
 
-      if (birthdayMusic.paused) {
+      if (
+        birthdayMusic.paused
+      ) {
 
-        birthdayMusic.play()
+        birthdayMusic
+          .play()
           .then(() => {
 
             musicStarted = true;
 
             musicToggle.textContent =
               "🎵 Music ON";
-
-          })
-          .catch((error) => {
-
-            console.log(
-              "Music could not start:",
-              error
-            );
 
           });
 
@@ -898,28 +1675,307 @@
 
 
 
-    /*
-      If the visitor returns to the website
-      after switching tabs, keep the music state.
-    */
+    /* =====================================
+       RESORT REVEAL
+    ====================================== */
 
-    document.addEventListener(
-      "visibilitychange",
-      function() {
+    function revealResort() {
 
-        if (
-          !document.hidden &&
-          musicStarted &&
-          birthdayMusic.paused
-        ) {
+      const reveal =
+        document.getElementById(
+          "resortReveal"
+        );
 
-          birthdayMusic.play()
-            .catch(() => {});
 
-        }
+      if (
+        reveal.classList.contains(
+          "revealed"
+        )
+      ) {
+
+        return;
 
       }
-    );
+
+
+      reveal.classList.add(
+        "revealed"
+      );
+
+
+      celebrate(
+        [
+          "🎉",
+          "🏝️",
+          "🌴",
+          "✨",
+          "🎊",
+          "😎",
+          "🍹"
+        ]
+      );
+
+    }
+
+
+
+    /* =====================================
+       GIFT REVEAL
+    ====================================== */
+
+    function revealGift(
+      gift,
+      clickedButton
+    ) {
+
+
+      const result =
+        document.getElementById(
+          "giftResult"
+        );
+
+
+      let title = "";
+      let message = "";
+      let image = "";
+      let emoji = "";
+
+
+      /* CAKE */
+
+      if (
+        gift === "cake"
+      ) {
+
+        title =
+          "🎂 YOU'VE GOT A CAKE! 🎂";
+
+        message =
+          "Because apparently birthdays without cake are illegal. 😂";
+
+        image =
+          "assets/cake.jpg";
+
+        emoji =
+          "🎂";
+
+      }
+
+
+      /* PIZZA */
+
+      if (
+        gift === "pizza"
+      ) {
+
+        title =
+          "🍕 YOU'VE GOT A PIZZA! 🍕";
+
+        message =
+          "Forget calories. It's your birthday. We don't count today. 😂";
+
+        image =
+          "assets/pizza.jpg";
+
+        emoji =
+          "🍕";
+
+      }
+
+
+      /* MILKSHAKE */
+
+      if (
+        gift === "shake"
+      ) {
+
+        title =
+          "🥤 YOU'VE GOT A MILKSHAKE! 🥤";
+
+        message =
+          "Because being the Raja of the family is thirsty work. 😂";
+
+        image =
+          "assets/shake.jpg";
+
+        emoji =
+          "🥤";
+
+      }
+
+
+
+      result.innerHTML = `
+
+        <div>
+
+          <div
+            style="
+              font-size:3rem;
+              margin-bottom:10px;
+            ">
+
+            ${emoji}
+
+          </div>
+
+
+          <h3>
+            ${title}
+          </h3>
+
+
+          <p>
+            ${message}
+          </p>
+
+
+          <img
+            src="${image}"
+            alt="${gift}"
+          >
+
+
+          <p
+            style="
+              margin-top:18px;
+              font-weight:800;
+            ">
+
+            🎉 Happy Birthday, Jijaji! 🎉
+
+          </p>
+
+        </div>
+
+      `;
+
+
+      result.classList.remove(
+        "show"
+      );
+
+
+      /*
+        Force browser to restart
+        the animation.
+      */
+
+      void result.offsetWidth;
+
+
+      result.classList.add(
+        "show"
+      );
+
+
+      celebrate(
+        [
+          emoji,
+          "🎉",
+          "✨",
+          "🎊",
+          "🥳",
+          "💥",
+          "❤️"
+        ]
+      );
+
+
+
+      /*
+        Scroll slightly down so
+        the surprise result is visible.
+      */
+
+      setTimeout(() => {
+
+        result.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+
+      }, 300);
+
+    }
+
+
+
+    /* =====================================
+       CONFETTI / EMOJI CELEBRATION
+    ====================================== */
+
+    function celebrate(
+      emojis
+    ) {
+
+
+      for (
+        let i = 0;
+        i < 25;
+        i++
+      ) {
+
+
+        const item =
+          document.createElement(
+            "div"
+          );
+
+
+        item.className =
+          "mini-confetti";
+
+
+        item.textContent =
+          emojis[
+            Math.floor(
+              Math.random() *
+              emojis.length
+            )
+          ];
+
+
+        item.style.setProperty(
+          "--x",
+          (
+            Math.random() *
+            700 -
+            350
+          ) + "px"
+        );
+
+
+        item.style.setProperty(
+          "--y",
+          (
+            Math.random() *
+            600 -
+            300
+          ) + "px"
+        );
+
+
+        item.style.animationDelay =
+          (
+            Math.random() *
+            .25
+          ) + "s";
+
+
+        document.body.appendChild(
+          item
+        );
+
+
+        setTimeout(
+          () => item.remove(),
+          1600
+        );
+
+      }
+
+    }
 
   </script>
 
@@ -929,7 +1985,8 @@
   <!-- EXISTING WEBSITE JAVASCRIPT -->
   <!-- ================================================= -->
 
-  <script src="script.js"></script>
+  <script src="script.js">
+  </script>
 
 
 </body>
