@@ -1,745 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Jijaaajii! 🎉</title>
 
-  <title>
-    Happy Birthday Jijaaajii! 🎉
-  </title>
-
-  <link
-    rel="preconnect"
-    href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
-    rel="stylesheet">
-
-  <link
     rel="stylesheet"
-    href="style.css">
+  >
 
-
-  <!-- EXTRA SURPRISE ANIMATIONS -->
+  <link rel="stylesheet" href="style.css">
 
   <style>
+    /* =========================================================
+       EXTRA BIRTHDAY HUMOUR + REVEAL STYLES
+       ========================================================= */
 
-    /* ================================
-       SURPRISE REVEAL
-    ================================= */
+    .hero-sub {
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
 
-    .reveal-button {
+    .funny-line {
+      margin-top: 10px;
+      font-size: 1rem;
+      opacity: 0.9;
+    }
 
+    /* Reveal Button */
+    .reveal-btn {
       border: none;
       cursor: pointer;
-
-      padding: 18px 28px;
-
-      border-radius: 999px;
-
+      padding: 15px 24px;
+      border-radius: 50px;
       font-family: inherit;
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 800;
-
-      background: linear-gradient(
-        135deg,
-        #ff6b9d,
-        #ffb347
-      );
-
-      color: white;
-
-      box-shadow:
-        0 10px 30px rgba(0,0,0,.18);
-
-      transition:
-        transform .25s ease,
-        box-shadow .25s ease;
-
-      margin: 20px auto;
-
-      display: block;
+      transition: all 0.3s ease;
+      margin: 18px 0;
     }
 
-
-    .reveal-button:hover {
-
-      transform:
-        translateY(-5px)
-        scale(1.03);
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
-
+    .reveal-btn:hover {
+      transform: translateY(-3px) scale(1.03);
     }
 
-
-    .reveal-button:active {
-
-      transform:
-        scale(.95);
-
-    }
-
-
-    /* ================================
-       HIDDEN SURPRISE
-    ================================= */
-
+    /* Hidden Surprise */
     .hidden-surprise {
-
       display: none;
-
       opacity: 0;
-
-      transform:
-        scale(.7)
-        translateY(30px);
-
+      transform: translateY(30px) scale(0.95);
     }
-
 
     .hidden-surprise.revealed {
-
       display: block;
-
-      animation:
-        surpriseReveal
-        .8s cubic-bezier(.17,.89,.32,1.28)
-        forwards;
-
+      animation: surpriseReveal 0.8s ease forwards;
     }
 
-
     @keyframes surpriseReveal {
-
       0% {
-
         opacity: 0;
-
-        transform:
-          scale(.5)
-          rotate(-5deg)
-          translateY(40px);
-
+        transform: translateY(35px) scale(0.9);
       }
 
       60% {
-
         opacity: 1;
-
-        transform:
-          scale(1.08)
-          rotate(2deg)
-          translateY(-5px);
-
+        transform: translateY(-8px) scale(1.02);
       }
 
       100% {
-
         opacity: 1;
-
-        transform:
-          scale(1)
-          rotate(0)
-          translateY(0);
-
+        transform: translateY(0) scale(1);
       }
-
     }
 
-
-    /* ================================
-       BIG SURPRISE TEXT
-    ================================= */
-
-    .surprise-reveal-title {
-
-      font-size:
-        clamp(1.8rem, 5vw, 3rem);
-
-      margin:
-        20px 0 10px;
-
-      animation:
-        popIn
-        .7s ease
-        forwards;
-
+    .reveal-title {
+      font-size: 2rem;
+      margin: 15px 0;
     }
 
-
-    .surprise-reveal-text {
-
-      font-size: 1.15rem;
-
-      margin-bottom: 20px;
-
+    .reveal-message {
+      font-size: 1.1rem;
+      line-height: 1.7;
     }
 
-
-    @keyframes popIn {
-
-      0% {
-
-        opacity: 0;
-
-        transform:
-          scale(.2)
-          rotate(-8deg);
-
-      }
-
-      70% {
-
-        transform:
-          scale(1.15)
-          rotate(3deg);
-
-      }
-
-      100% {
-
-        opacity: 1;
-
-        transform:
-          scale(1)
-          rotate(0);
-
-      }
-
-    }
-
-
-    /* ================================
-       GIFT GRID
-    ================================= */
-
+    /* Gift Cards */
     .gift-choice-grid {
-
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-
-      margin-top: 25px;
-
+      margin-top: 30px;
     }
-
 
     .gift-choice {
-
       border: none;
-
       cursor: pointer;
-
-      padding: 25px 18px;
-
-      border-radius: 24px;
-
-      background:
-        rgba(255,255,255,.9);
-
-      color: inherit;
-
+      padding: 28px 18px;
+      border-radius: 25px;
       font-family: inherit;
-
-      box-shadow:
-        0 12px 30px rgba(0,0,0,.12);
-
-      transition:
-        transform .3s ease,
-        box-shadow .3s ease;
-
+      transition: all 0.35s ease;
       position: relative;
-
       overflow: hidden;
-
     }
-
 
     .gift-choice:hover {
-
-      transform:
-        translateY(-8px)
-        rotate(-1deg);
-
-      box-shadow:
-        0 20px 45px rgba(0,0,0,.2);
-
+      transform: translateY(-8px) rotate(-1deg);
     }
-
 
     .gift-choice:active {
-
-      transform:
-        scale(.94);
-
+      transform: scale(0.96);
     }
 
+    .gift-number {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
 
     .gift-icon {
-
-      font-size: 4rem;
-
       display: block;
-
-      margin-bottom: 12px;
-
-      animation:
-        gentleFloat
-        2.5s ease-in-out infinite;
-
+      font-size: 4rem;
+      margin: 10px 0;
+      animation: giftFloat 2s ease-in-out infinite;
     }
 
-
-    @keyframes gentleFloat {
-
-      0%,100% {
-
-        transform:
-          translateY(0);
-
+    @keyframes giftFloat {
+      0%, 100% {
+        transform: translateY(0);
       }
 
       50% {
-
-        transform:
-          translateY(-7px);
-
+        transform: translateY(-8px);
       }
-
     }
-
-
-    .gift-number {
-
-      display: inline-block;
-
-      font-size: .75rem;
-
-      font-weight: 800;
-
-      letter-spacing: 1px;
-
-      opacity: .6;
-
-      margin-bottom: 5px;
-
-    }
-
 
     .gift-choice h3 {
-
-      margin:
-        5px 0;
-
-      font-size:
-        1.25rem;
-
+      margin: 8px 0;
+      font-size: 1.25rem;
     }
-
 
     .gift-choice p {
-
       margin: 0;
-
-      font-weight: 600;
-
-      opacity: .75;
-
+      font-size: 0.95rem;
     }
 
-
-    /* ================================
-       GIFT RESULT
-    ================================= */
-
+    /* Gift Result */
     .gift-result {
-
       display: none;
-
-      margin-top: 30px;
-
+      margin-top: 35px;
       padding: 25px;
-
       border-radius: 25px;
-
-      background:
-        rgba(255,255,255,.18);
-
-      backdrop-filter:
-        blur(10px);
-
-      border:
-        1px solid rgba(255,255,255,.3);
-
     }
-
 
     .gift-result.show {
-
       display: block;
-
-      animation:
-        giftBoom
-        .9s cubic-bezier(.17,.89,.32,1.28)
-        forwards;
-
+      animation: giftReveal 0.8s ease forwards;
     }
 
-
-    @keyframes giftBoom {
-
+    @keyframes giftReveal {
       0% {
-
         opacity: 0;
-
-        transform:
-          scale(.2)
-          rotate(-8deg);
-
+        transform: scale(0.5) rotate(-5deg);
       }
 
-      55% {
-
+      70% {
         opacity: 1;
-
-        transform:
-          scale(1.12)
-          rotate(3deg);
-
+        transform: scale(1.05) rotate(2deg);
       }
 
       100% {
-
         opacity: 1;
-
-        transform:
-          scale(1)
-          rotate(0);
-
+        transform: scale(1) rotate(0);
       }
-
     }
-
 
     .gift-result img {
-
-      width: min(450px, 90%);
-
-      max-height: 300px;
-
+      width: 100%;
+      max-width: 420px;
+      max-height: 400px;
       object-fit: cover;
-
-      border-radius: 20px;
-
-      margin-top: 15px;
-
-      box-shadow:
-        0 15px 40px rgba(0,0,0,.25);
-
-      animation:
-        imageDrop
-        .8s ease
-        .2s both;
-
+      border-radius: 22px;
+      margin: 15px auto;
+      display: block;
     }
-
-
-    @keyframes imageDrop {
-
-      from {
-
-        opacity: 0;
-
-        transform:
-          scale(.6)
-          translateY(-30px);
-
-      }
-
-      to {
-
-        opacity: 1;
-
-        transform:
-          scale(1)
-          translateY(0);
-
-      }
-
-    }
-
 
     .gift-result h3 {
-
-      font-size:
-        clamp(1.7rem, 5vw, 2.6rem);
-
-      margin:
-        5px 0 10px;
-
+      font-size: 2rem;
+      margin: 10px 0;
     }
-
 
     .gift-result p {
-
-      font-size: 1.1rem;
-
-      margin: 5px 0;
-
+      font-size: 1.05rem;
+      line-height: 1.7;
     }
 
-
-    /* ================================
-       CONFETTI BURST
-    ================================= */
-
-    .mini-confetti {
-
+    /* Confetti */
+    .emoji-confetti {
       position: fixed;
-
-      top: 50%;
-      left: 50%;
-
+      top: -50px;
+      z-index: 99999;
       pointer-events: none;
-
-      z-index: 9999;
-
-      font-size: 2rem;
-
-      animation:
-        confettiFly
-        1.2s
-        ease-out
-        forwards;
-
+      animation: emojiFall 2.8s linear forwards;
+      font-size: 25px;
     }
 
-
-    @keyframes confettiFly {
-
+    @keyframes emojiFall {
       0% {
-
+        transform: translateY(0) rotate(0deg);
         opacity: 1;
-
-        transform:
-          translate(-50%,-50%)
-          scale(.5);
-
       }
 
       100% {
-
+        transform: translateY(110vh) rotate(720deg);
         opacity: 0;
-
-        transform:
-          translate(
-            calc(-50% + var(--x)),
-            calc(-50% + var(--y))
-          )
-          rotate(720deg)
-          scale(1.2);
-
       }
-
     }
 
+    .video-caption {
+      font-weight: 700;
+      margin-top: 15px;
+    }
 
-    /* ================================
-       MOBILE
-    ================================= */
+    .mini-joke {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-top: 8px;
+    }
 
-    @media (max-width: 700px) {
-
+    /* Mobile */
+    @media (max-width: 768px) {
       .gift-choice-grid {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns: 1fr;
       }
 
       .gift-choice {
-
-        padding: 22px;
-
+        padding: 24px 15px;
       }
 
+      .reveal-title {
+        font-size: 1.6rem;
+      }
+
+      .gift-result h3 {
+        font-size: 1.6rem;
+      }
     }
-
-
-    /* ================================
-       MUSIC BUTTON
-    ================================= */
-
-    #musicToggle {
-
-      position: fixed;
-
-      top: 18px;
-
-      right: 18px;
-
-      z-index: 10000;
-
-      border: none;
-
-      border-radius: 999px;
-
-      padding:
-        10px 16px;
-
-      background:
-        rgba(255,255,255,.9);
-
-      color: #4b2142;
-
-      font-family: inherit;
-
-      font-weight: 800;
-
-      cursor: pointer;
-
-      box-shadow:
-        0 5px 20px rgba(0,0,0,.15);
-
-      transition:
-        transform .2s ease;
-
-    }
-
-
-    #musicToggle:hover {
-
-      transform:
-        scale(1.05);
-
-    }
-
   </style>
-
 </head>
-
 
 <body>
 
-
-  <!-- PARTY ANIMATION -->
-
-  <div
-    id="partyLayer"
-    aria-hidden="true">
-  </div>
+  <!-- =========================================================
+       PARTY LAYER
+       ========================================================= -->
+  <div id="partyLayer" aria-hidden="true"></div>
 
 
-
-  <!-- ================================================= -->
-  <!-- MUSIC -->
-  <!-- ================================================= -->
-
-  <audio
-    id="birthdayMusic"
-    preload="auto">
-
-    <source
-      src="assets/birthday-music.wav"
-      type="audio/wav">
-
-    Your browser does not support the audio element.
-
-  </audio>
-
-
-  <button
-    id="musicToggle"
-    onclick="toggleMusic()"
-    aria-label="Toggle birthday music">
-
-    🎵 Music ON
-
-  </button>
-
-
-
-  <!-- ================================================= -->
-  <!-- HERO -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       HERO
+       ========================================================= -->
   <header class="hero">
 
-    <div class="hero-glow">
-    </div>
-
+    <div class="hero-glow"></div>
 
     <div class="hero-content">
 
-
       <div class="eyebrow">
-
-        A little birthday surprise
-        made just for you ✨
-
+        A little birthday surprise made just for you ✨
       </div>
 
-
       <h1>
-
         Happy Birthday<br>
-
-        <span>
-          Jijaaajii! 🎂
-        </span>
-
+        <span>Jijaaajii! 🎂</span>
       </h1>
 
-
       <p class="hero-sub">
-
-        Today is all about celebrating
-        the wonderful person you are.
-
+        Aaj ka din special hai...
+        <br>
+        Kyunki aaj ke din <strong>Raja Ji ka janam hua tha! 👑😂</strong>
       </p>
-
 
       <button
         class="scroll-btn"
-        onclick="startBirthday()">
-
-        Let the celebration begin ↓
-
+        onclick="startBirthday()"
+      >
+        Chalo Ji, Birthday Shuru Karein! 🎉
       </button>
+
+      <p class="funny-line">
+        ⚠️ Warning: Is website mein pyaar, masti aur thodi si family wali khinchai hai. 😂
+      </p>
 
     </div>
 
   </header>
 
 
-
+  <!-- =========================================================
+       MAIN CONTENT
+       ========================================================= -->
   <main>
 
 
-    <!-- ================================================= -->
-    <!-- WISHES -->
-    <!-- ================================================= -->
-
-    <section
-      id="wishes"
-      class="section">
-
+    <!-- =======================================================
+         WISHES
+         ======================================================= -->
+    <section id="wishes" class="section">
 
       <div class="section-heading">
 
@@ -747,24 +319,23 @@
           BLOCK 01
         </span>
 
-
         <h2>
           My Wishes For You 💛
         </h2>
 
-
         <p>
-          A few very important facts
-          about our favourite Jijaji...
+          Kuch facts duniya se chhupe nahi rehne chahiye...
+          <br>
+          Especially jab baat apne <strong>Jijaji</strong> ki ho. 😌😂
         </p>
 
       </div>
 
 
-
       <div class="wish-grid">
 
 
+        <!-- Wish 1 -->
         <article class="wish-card c1">
 
           <span class="number">
@@ -781,15 +352,19 @@
 
           <p>
             Jiju Humare
-            <strong>
-              Beautiful!
-            </strong>
+            <strong>Beautiful!</strong>
+          </p>
+
+          <p class="mini-joke">
+            Itne sundar ki selfie camera bhi bole —
+            <br>
+            "Bhai, brightness thodi kam karun?" 😂
           </p>
 
         </article>
 
 
-
+        <!-- Wish 2 -->
         <article class="wish-card c2">
 
           <span class="number">
@@ -806,15 +381,21 @@
 
           <p>
             Jiju Humare
-            <strong>
-              First Class!
-            </strong>
+            <strong>First Class!</strong>
+          </p>
+
+          <p class="mini-joke">
+            Personality first class,
+            <br>
+            attitude first class...
+            <br>
+            Bas bill aate hi economy class. 😂
           </p>
 
         </article>
 
 
-
+        <!-- Wish 3 -->
         <article class="wish-card c3">
 
           <span class="number">
@@ -831,15 +412,19 @@
 
           <p>
             Jiju Humare
-            <strong>
-              Handsome!
-            </strong>
+            <strong>Handsome!</strong>
+          </p>
+
+          <p class="mini-joke">
+            Phone koi bhi ho...
+            <br>
+            Jijaji ka swag alag hi level ka hai! 😎
           </p>
 
         </article>
 
 
-
+        <!-- Wish 4 -->
         <article class="wish-card c4">
 
           <span class="number">
@@ -851,14 +436,19 @@
           </div>
 
           <h3>
-            Cola Cola hoo yaa Frooti
+            Cola Cola ho yaa Frooti
           </h3>
 
           <p>
             Jiju Humare
-            <strong>
-              Cutiee!
-            </strong>
+            <strong>Cutiee!</strong>
+          </p>
+
+          <p class="mini-joke">
+            Thoda cute,
+            thoda nautanki...
+            <br>
+            Full family entertainment package! 😂
           </p>
 
         </article>
@@ -866,27 +456,22 @@
       </div>
 
 
-
-      <!-- RAJA -->
-
+      <!-- Raja Card -->
       <button
         class="raja-card"
-        onclick="openRaja()">
-
+        onclick="openRaja()"
+      >
 
         <div class="sparkle-orbit">
           ✨
         </div>
 
-
         <div class="raja-photo">
-
           <img
             src="assets/jiju-1.jpg"
-            alt="Jijaji">
-
+            alt="Jijaji"
+          >
         </div>
-
 
         <div>
 
@@ -894,24 +479,25 @@
             THE FINAL VERDICT 👑
           </span>
 
-
           <h3>
-
-            1 Tamatar Taaza Hai,<br>
-
-            Jiju Humare
-            Raja Haiii! 👑
-
+            1 Tamatar Taaza Hai,
+            <br>
+            Jiju Humare Raja Haiii! 👑
           </h3>
 
+          <p>
+            Ghar ke asli Raja.
+            Advice free mein denge.
+            Opinion bina maange denge.
+            Aur birthday treat...
+            <strong>woh toh lena hi hai! 😂</strong>
+          </p>
 
           <p>
-            Click me for the full
-            royal celebration!
+            👑 Raja Ji Ka Darbaar Kholo
           </p>
 
         </div>
-
 
         <span class="arrow">
           →
@@ -923,13 +509,10 @@
 
 
 
-    <!-- ================================================= -->
-    <!-- SURPRISE BOXES -->
-    <!-- ================================================= -->
-
-    <section
-      class="section surprises">
-
+    <!-- =======================================================
+         SURPRISE BOXES
+         ======================================================= -->
+    <section class="section surprises">
 
       <div class="section-heading">
 
@@ -937,47 +520,50 @@
           BLOCK 02
         </span>
 
-
         <h2>
-          Open One Box For Surprise 🎁
+          Ab Dekho Kya Kya Kand Plan Kiya Hai 🎁😂
         </h2>
 
-
         <p>
-          Choose carefully... or don't.
-          There are surprises hiding everywhere.
+          Teen boxes hain.
+          <br>
+          Teeno mein pyaar hai...
+          aur thodi si <strong>masti bhi.</strong> 😂
         </p>
 
       </div>
-
 
 
       <div class="surprise-grid">
 
 
         <!-- MEMORY -->
-
         <button
           class="surprise-box memory"
-          onclick="openModal('memoryModal')">
+          onclick="openModal('memoryModal')"
+        >
 
           <span class="box-icon">
             📸
           </span>
 
-
           <span class="box-tag">
             MEMORIES
           </span>
 
-
           <h3>
-            For My Favourite Jijaji
+            Purani Yaadein,
+            Naya Drama
           </h3>
 
+          <p>
+            Jab Jijaji itne shareef hua karte the...
+            <br>
+            Ya shayad photos hi aisi hain. 😂
+          </p>
 
           <p>
-            Open the memory box →
+            📸 Purane Raaz Kholiye →
           </p>
 
         </button>
@@ -985,28 +571,31 @@
 
 
         <!-- RESORT -->
-
         <button
           class="surprise-box resort"
-          onclick="openModal('resortModal')">
+          onclick="openModal('resortModal')"
+        >
 
           <span class="box-icon">
             🏝️
           </span>
 
-
           <span class="box-tag">
             SECRET PLAN
           </span>
-
 
           <h3>
             One Very Important Plan
           </h3>
 
+          <p>
+            Kuch toh plan hua hai...
+            <br>
+            But pehle raaz rahega. 👀
+          </p>
 
           <p>
-            Click to discover the secret →
+            🕵️ Raaz Kholna Hai? →
           </p>
 
         </button>
@@ -1014,28 +603,31 @@
 
 
         <!-- TREAT -->
-
         <button
           class="surprise-box treat"
-          onclick="openModal('treatModal')">
+          onclick="openModal('treatModal')"
+        >
 
           <span class="box-icon">
             🎁
           </span>
 
-
           <span class="box-tag">
             BIRTHDAY TREAT
           </span>
-
 
           <h3>
             Choose Your Treat
           </h3>
 
+          <p>
+            Birthday hai bhai...
+            <br>
+            Aaj calories count karna mana hai. 😂
+          </p>
 
           <p>
-            Click to discover your gift →
+            🎁 Kismat Aazmaao →
           </p>
 
         </button>
@@ -1046,58 +638,51 @@
 
 
 
-    <!-- ================================================= -->
-    <!-- VIDEO -->
-    <!-- ================================================= -->
-
-    <section
-      class="video-section section">
-
+    <!-- =======================================================
+         VIDEO
+         ======================================================= -->
+    <section class="video-section section">
 
       <div class="video-card">
-
 
         <span class="section-kicker">
           BONUS SURPRISE 🎬
         </span>
 
-
         <h2>
-          And because one surprise
-          is never enough... ❤️
+          Aur Bhai... Picture Abhi Baaki Hai! 🎬😂
         </h2>
 
-
         <p>
-          We made a little something
-          special for you.
-          Sit back, relax and enjoy! 🥳
+          Itni mehnat se website banayi hai...
+          Video toh banta hai boss! 😎
         </p>
 
+        <p>
+          Baitho. Volume badhao.
+          Aur emotional hone ke liye ready raho. 😂❤️
+        </p>
 
 
         <video
           controls
           playsinline
           preload="metadata"
-          width="100%">
-
+          width="100%"
+        >
 
           <source
             src="assets/birthday-video.mp4"
-            type="video/mp4">
+            type="video/mp4"
+          >
 
-
-          Sorry, your browser does not
-          support the video tag.
+          Sorry, your browser does not support the video tag.
 
         </video>
 
 
         <p class="video-caption">
-
           🎂 Happy Birthday, Jijaji! 🎉
-
         </p>
 
       </div>
@@ -1108,86 +693,79 @@
 
 
 
-  <!-- ================================================= -->
-  <!-- FOOTER -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
   <footer>
 
     <div>
-      Made with lots of love,
-      laughter &amp; thodi si masti ❤️
+      Made with pyaar, thodi si masti,
+      aur kaafi saari family wali khinchai. 😂❤️
     </div>
-
 
     <div>
       Happy Birthday, Jijaaajii! 🎉
+    </div>
+
+    <div style="margin-top:10px;">
+      Party kab de rahe ho?
+      <strong>Asking for the whole family. 👀😂</strong>
     </div>
 
   </footer>
 
 
 
-  <!-- ================================================= -->
-  <!-- RAJA MODAL -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       RAJA MODAL
+       ========================================================= -->
   <div
     class="modal"
     id="rajaModal"
-    onclick="closeOnBackdrop(event, 'rajaModal')">
+    onclick="closeOnBackdrop(event, 'rajaModal')"
+  >
 
-
-    <div
-      class="modal-content glitter">
-
+    <div class="modal-content glitter">
 
       <button
         class="close"
-        onclick="closeModal('rajaModal')">
-
+        onclick="closeModal('rajaModal')"
+      >
         ×
-
       </button>
 
-
       <div class="cracker">
-
         🎇 ✨ 🎆 ✨ 🎇
-
       </div>
-
 
       <img
         class="modal-main-photo"
         src="assets/jiju-1.jpg"
-        alt="Jijaji">
-
+        alt="Jijaji"
+      >
 
       <h2>
-
-        1 Tamatar Taaza Hai,<br>
-
-        Jiju Humare
-        Raja Haiii! 👑
-
+        1 Tamatar Taaza Hai,
+        <br>
+        Jiju Humare Raja Haiii! 👑
       </h2>
 
-
-      <p>
-
-        Royal treatment unlocked.
-
-        May your year be as
-        शानदार as you are!
-
+      <p class="big-message">
+        👑 <strong>RAJA JI KI JAI HO!</strong> 👑
       </p>
 
+      <p>
+        Aaj ke din aapki har baat maani jayegi...
+        <br>
+        <strong>Terms & Conditions apply. 😂</strong>
+      </p>
+
+      <p>
+        Kal se phir normal family rules. 😌😂
+      </p>
 
       <div class="confetti-line">
-
         🎊 🎉 ✨ 🥳 ✨ 🎉 🎊
-
       </div>
 
     </div>
@@ -1196,81 +774,82 @@
 
 
 
-  <!-- ================================================= -->
-  <!-- MEMORY MODAL -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       MEMORY MODAL
+       ========================================================= -->
   <div
     class="modal"
     id="memoryModal"
-    onclick="closeOnBackdrop(event, 'memoryModal')">
+    onclick="closeOnBackdrop(event, 'memoryModal')"
+  >
 
-
-    <div
-      class="modal-content wide">
-
+    <div class="modal-content wide">
 
       <button
         class="close"
-        onclick="closeModal('memoryModal')">
-
+        onclick="closeModal('memoryModal')"
+      >
         ×
-
       </button>
 
-
       <span class="section-kicker">
-        A MESSAGE FOR YOU
+        A MESSAGE FOR YOU ❤️
       </span>
 
-
       <h2>
-        Happy Birthday, dear Jiju! 💛
+        Happy Birthday, Dear Jiju! 💛
       </h2>
+
+      <p class="big-message">
+        Thodi purani photos,
+        thodi purani yaadein,
+        aur ekdum fresh birthday wishes! 😂❤️
+      </p>
 
 
       <div class="photo-grid">
 
-
         <img
           src="assets/jiju-1.jpg"
-          alt="Memory 1">
-
+          alt="Memory 1"
+        >
 
         <img
           src="assets/jiju-2.jpg"
-          alt="Memory 2">
-
+          alt="Memory 2"
+        >
 
         <img
           src="assets/jiju-3.jpg"
-          alt="Memory 3">
-
+          alt="Memory 3"
+        >
 
         <img
           src="assets/jiju-4.jpg"
-          alt="Memory 4">
+          alt="Memory 4"
+        >
 
       </div>
 
 
       <p class="big-message">
-
         May your special day bring you
-        countless happiness, endless joy,
-        and all the success you deserve.
-
+        countless happiness,
+        endless joy,
+        and all the success you deserve. ❤️
       </p>
 
-
       <p>
-
         Your presence brings so much warmth
         and positivity to our family.
+      </p>
 
-        Thank you for always being such a
-        wonderful human being! ❤️
-
+      <p>
+        Thank you for always being such a wonderful
+        human being...
+        <strong>
+          and for tolerating all of us. 😂❤️
+        </strong>
       </p>
 
     </div>
@@ -1279,130 +858,134 @@
 
 
 
-  <!-- ================================================= -->
-  <!-- RESORT MODAL - SECRET REVEAL -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       RESORT MODAL
+       ========================================================= -->
   <div
     class="modal"
     id="resortModal"
-    onclick="closeOnBackdrop(event, 'resortModal')">
+    onclick="closeOnBackdrop(event, 'resortModal')"
+  >
 
-
-    <div
-      class="modal-content wide">
-
+    <div class="modal-content wide">
 
       <button
         class="close"
-        onclick="closeModal('resortModal')">
-
+        onclick="closeModal('resortModal')"
+      >
         ×
-
       </button>
-
 
       <span class="section-kicker">
         TOP SECRET 🤫
       </span>
 
-
       <h2>
-        One Very Important Plan
+        One Very Important Plan 🏝️
       </h2>
 
-
       <p class="big-message">
-
-        We have something planned...
-
-        But we're not telling you yet. 👀
-
+        Kuch toh plan hua hai...
+        <br>
+        But pehle itna bata dete hain:
+        <br>
+        <strong>Aapko jaana hai. Bas. Discussion khatam. 😂</strong>
       </p>
 
 
-
       <!-- REVEAL BUTTON -->
-
       <button
-        class="reveal-button"
-        onclick="revealResort()">
-
-        🕵️ Click Here To Reveal The Plan 👀
-
+        class="reveal-btn"
+        onclick="revealResort()"
+      >
+        🕵️ Click Here — Raaz Kholna Hai? 👀
       </button>
 
 
-
       <!-- HIDDEN RESORT -->
-
       <div
         id="resortReveal"
-        class="hidden-surprise">
+        class="hidden-surprise"
+      >
 
-
-        <div class="cracker">
-
-          🎇 ✨ 🎆 ✨ 🎇
-
+        <div class="confetti-line">
+          🎉 🎊 🥳 🎉 🎊
         </div>
 
+        <h3 class="reveal-title">
+          🎉 SURPRISEEEEE! 🎉
+          <br>
+          Jijaji, Resort Chalo! 🏝️😂
+        </h3>
 
-        <h2
-          class="surprise-reveal-title">
+        <p class="reveal-message">
 
-          🎉 SURPRISE! 🎉<br>
+          Pack your bags, Raja Ji! 😎
 
-          IT'S A RESORT TRIP! 🏝️
+          <br><br>
 
-        </h2>
+          Pool ✔️
+          <br>
+          Food ✔️
+          <br>
+          Sunshine ✔️
+          <br>
+          Masti ✔️
+          <br>
+          Relaxation ✔️
 
+          <br><br>
 
-        <p
-          class="surprise-reveal-text">
-
-          Pack your bags, Raja! 😎<br>
-
-          We're planning a resort trip
-          VERY VERY SOON!
+          <strong>
+            Kaam? ❌
+            <br>
+            Uske baare mein baad mein sochenge. 😂
+          </strong>
 
         </p>
 
 
         <div class="resort-grid">
 
-
           <img
             src="assets/resort-1.jpg"
-            alt="Resort">
-
+            alt="Resort"
+          >
 
           <img
             src="assets/pool-1.jpg"
-            alt="Swimming pool">
+            alt="Swimming Pool"
+          >
 
         </div>
 
 
         <p class="big-message">
 
-          🏖️ Pool + 🍕 Food + ☀️ Sunshine
-          + 😂 Masti = PERFECT PLAN!
+          🌴 Pool + Food + Sunshine + Masti
+          <br>
+          =
+          <strong>PERFECT PLAN!</strong> 😎
 
         </p>
-
 
         <p>
 
-          And yes...
-
           <strong>
-            YOU ARE COMING. 😎
+            YOU ARE COMING.
           </strong>
 
-          No excuses accepted.
+          <br>
+
+          No excuses.
+          No negotiations.
+          No "dekhte hain". 😂
 
         </p>
+
+        <div class="confetti-line">
+          🏝️ 🍹 😎 🎉 🥳
+        </div>
 
       </div>
 
@@ -1412,91 +995,73 @@
 
 
 
-  <!-- ================================================= -->
-  <!-- TREAT MODAL -->
-  <!-- ================================================= -->
-
+  <!-- =========================================================
+       TREAT MODAL
+       ========================================================= -->
   <div
     class="modal"
     id="treatModal"
-    onclick="closeOnBackdrop(event, 'treatModal')">
+    onclick="closeOnBackdrop(event, 'treatModal')"
+  >
 
-
-    <div
-      class="modal-content wide">
-
+    <div class="modal-content wide">
 
       <button
         class="close"
-        onclick="closeModal('treatModal')">
-
+        onclick="closeModal('treatModal')"
+      >
         ×
-
       </button>
 
-
       <span class="section-kicker">
-        TOP SECRET GIFTS 🎁
+        BIRTHDAY TREAT 🎁
       </span>
 
-
       <h2>
-        Choose Your Birthday Gift! 🎁
+        Kismat Aazmaao, Raja Ji! 🎁😂
       </h2>
 
+      <p class="big-message">
 
-      <p>
+        Birthday hai bhai...
 
-        Three gifts are waiting...
+        <br>
 
-        But we're not telling you
-        what's inside. 🤫
-
-      </p>
-
-
-      <p>
-
-        Choose wisely, Jijaji.
-
-        Or don't.
-
-        We're not judging. 😂
+        <strong>
+          Aaj calories count karna STRICTLY MANA HAI. 😂
+        </strong>
 
       </p>
 
+      <p>
+        Teen gifts hain.
+        <br>
+        Kismat dekho aur ek choose karo. 👀
+      </p>
 
 
-      <!-- ================================================= -->
       <!-- GIFT OPTIONS -->
-      <!-- ================================================= -->
-
-      <div
-        class="gift-choice-grid">
+      <div class="gift-choice-grid">
 
 
         <!-- GIFT 1 -->
-
         <button
           class="gift-choice"
-          onclick="revealGift('cake', this)">
-
+          onclick="revealGift('cake', this)"
+        >
 
           <span class="gift-number">
             GIFT 01
           </span>
 
-
           <span class="gift-icon">
             🎁
           </span>
-
 
           <h3>
             Mystery Gift #1
           </h3>
 
-
           <p>
             Click here to reveal 👀
           </p>
@@ -1504,29 +1069,24 @@
         </button>
 
 
-
         <!-- GIFT 2 -->
-
         <button
           class="gift-choice"
-          onclick="revealGift('pizza', this)">
-
+          onclick="revealGift('pizza', this)"
+        >
 
           <span class="gift-number">
             GIFT 02
           </span>
 
-
           <span class="gift-icon">
             🎁
           </span>
-
 
           <h3>
             Mystery Gift #2
           </h3>
 
-
           <p>
             Click here to reveal 👀
           </p>
@@ -1534,28 +1094,23 @@
         </button>
 
 
-
         <!-- GIFT 3 -->
-
         <button
           class="gift-choice"
-          onclick="revealGift('shake', this)">
-
+          onclick="revealGift('shake', this)"
+        >
 
           <span class="gift-number">
             GIFT 03
           </span>
 
-
           <span class="gift-icon">
             🎁
           </span>
 
-
           <h3>
             Mystery Gift #3
           </h3>
-
 
           <p>
             Click here to reveal 👀
@@ -1566,16 +1121,13 @@
       </div>
 
 
-
-      <!-- ================================================= -->
-      <!-- GIFT RESULT -->
-      <!-- ================================================= -->
-
+      <!-- RESULT -->
       <div
         id="giftResult"
-        class="gift-result">
-
+        class="gift-result"
+      >
       </div>
+
 
     </div>
 
@@ -1583,36 +1135,69 @@
 
 
 
-  <!-- ================================================= -->
-  <!-- SURPRISE JAVASCRIPT -->
-  <!-- ================================================= -->
+  <!-- =========================================================
+       MUSIC
+       ========================================================= -->
+
+  <audio
+    id="birthdayMusic"
+    preload="auto"
+  >
+
+    <source
+      src="assets/birthday-music.wav"
+      type="audio/wav"
+    >
+
+    Your browser does not support the audio element.
+
+  </audio>
+
+
+  <button
+    id="musicToggle"
+    onclick="toggleMusic()"
+    aria-label="Toggle birthday music"
+    style="
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      z-index:9999;
+      border:none;
+      border-radius:50px;
+      padding:12px 18px;
+      cursor:pointer;
+      font-family:inherit;
+      font-weight:700;
+    "
+  >
+    🎵 Music ON
+  </button>
+
+
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
 
   <script>
 
-    /* =====================================
+    /* =========================================================
        BIRTHDAY MUSIC
-    ====================================== */
+       ========================================================= */
 
     const birthdayMusic =
-      document.getElementById(
-        "birthdayMusic"
-      );
-
+      document.getElementById("birthdayMusic");
 
     const musicToggle =
-      document.getElementById(
-        "musicToggle"
-      );
-
+      document.getElementById("musicToggle");
 
     let musicStarted = false;
-
 
 
     function startBirthday() {
 
       birthdayMusic.volume = 0.35;
-
 
       birthdayMusic
         .play()
@@ -1626,9 +1211,8 @@
         })
         .catch(() => {
 
-          console.log(
-            "Music could not start."
-          );
+          // Browser may block autoplay.
+          // User can use the music button.
 
         });
 
@@ -1642,12 +1226,9 @@
     }
 
 
-
     function toggleMusic() {
 
-      if (
-        birthdayMusic.paused
-      ) {
+      if (birthdayMusic.paused) {
 
         birthdayMusic
           .play()
@@ -1660,9 +1241,7 @@
 
           });
 
-      }
-
-      else {
+      } else {
 
         birthdayMusic.pause();
 
@@ -1675,64 +1254,31 @@
 
 
 
-    /* =====================================
+    /* =========================================================
        RESORT REVEAL
-    ====================================== */
+       ========================================================= */
 
     function revealResort() {
 
       const reveal =
-        document.getElementById(
-          "resortReveal"
-        );
+        document.getElementById("resortReveal");
 
+      reveal.classList.add("revealed");
 
-      if (
-        reveal.classList.contains(
-          "revealed"
-        )
-      ) {
-
-        return;
-
-      }
-
-
-      reveal.classList.add(
-        "revealed"
-      );
-
-
-      celebrate(
-        [
-          "🎉",
-          "🏝️",
-          "🌴",
-          "✨",
-          "🎊",
-          "😎",
-          "🍹"
-        ]
-      );
+      celebrate();
 
     }
 
 
 
-    /* =====================================
+    /* =========================================================
        GIFT REVEAL
-    ====================================== */
+       ========================================================= */
 
-    function revealGift(
-      gift,
-      clickedButton
-    ) {
-
+    function revealGift(gift, clickedButton) {
 
       const result =
-        document.getElementById(
-          "giftResult"
-        );
+        document.getElementById("giftResult");
 
 
       let title = "";
@@ -1741,152 +1287,116 @@
       let emoji = "";
 
 
-      /* CAKE */
-
-      if (
-        gift === "cake"
-      ) {
+      if (gift === "cake") {
 
         title =
-          "🎂 YOU'VE GOT A CAKE! 🎂";
+          "🎂 YOU GOT A CAKE!";
 
         message =
-          "Because apparently birthdays without cake are illegal. 😂";
+          `
+          Kyunki birthday pe cake toh banta hai boss! 😂
+          <br><br>
+          Calories ka hisaab kal se.
+          <br>
+          <strong>
+          Aaj sirf cake, happiness aur masti hogi! 🎂❤️
+          </strong>
+          `;
 
         image =
           "assets/cake.jpg";
 
-        emoji =
-          "🎂";
+        emoji = "🎂";
 
       }
 
 
-      /* PIZZA */
-
-      if (
-        gift === "pizza"
-      ) {
+      else if (gift === "pizza") {
 
         title =
-          "🍕 YOU'VE GOT A PIZZA! 🍕";
+          "🍕 YOU GOT A PIZZA!";
 
         message =
-          "Forget calories. It's your birthday. We don't count today. 😂";
+          `
+          Diet?
+          <strong>Kaunsi diet? 😂</strong>
+          <br><br>
+          Aaj pizza hoga.
+          Favourite wala.
+          <br>
+          Birthday hai bhai,
+          <strong>pet bhi celebrate karega! 😎</strong>
+          `;
 
         image =
           "assets/pizza.jpg";
 
-        emoji =
-          "🍕";
+        emoji = "🍕";
 
       }
 
 
-      /* MILKSHAKE */
-
-      if (
-        gift === "shake"
-      ) {
+      else if (gift === "shake") {
 
         title =
-          "🥤 YOU'VE GOT A MILKSHAKE! 🥤";
+          "🥤 YOU GOT A MILK SHAKE!";
 
         message =
-          "Because being the Raja of the family is thirsty work. 😂";
+          `
+          Raja Ji ko hydration bhi toh chahiye. 😂
+          <br><br>
+          Call karo,
+          favourite wala order karte hain!
+          <br>
+          <strong>
+          Birthday pe calories ka koi hisaab nahi hota. 😎
+          </strong>
+          `;
 
         image =
           "assets/shake.jpg";
 
-        emoji =
-          "🥤";
+        emoji = "🥤";
 
       }
-
 
 
       result.innerHTML = `
 
         <div>
 
-          <div
-            style="
-              font-size:3rem;
-              margin-bottom:10px;
-            ">
-
-            ${emoji}
-
-          </div>
-
-
           <h3>
             ${title}
           </h3>
-
-
-          <p>
-            ${message}
-          </p>
-
 
           <img
             src="${image}"
             alt="${gift}"
           >
 
-
-          <p
-            style="
-              margin-top:18px;
-              font-weight:800;
-            ">
-
-            🎉 Happy Birthday, Jijaji! 🎉
-
+          <p>
+            ${message}
           </p>
+
+          <div class="confetti-line">
+            🎉 🎊 🥳 ${emoji} 🥳 🎊 🎉
+          </div>
 
         </div>
 
       `;
 
 
-      result.classList.remove(
-        "show"
-      );
+      result.classList.remove("show");
 
-
-      /*
-        Force browser to restart
-        the animation.
-      */
-
+      // Force browser to restart animation
       void result.offsetWidth;
 
-
-      result.classList.add(
-        "show"
-      );
+      result.classList.add("show");
 
 
-      celebrate(
-        [
-          emoji,
-          "🎉",
-          "✨",
-          "🎊",
-          "🥳",
-          "💥",
-          "❤️"
-        ]
-      );
+      celebrate();
 
-
-
-      /*
-        Scroll slightly down so
-        the surprise result is visible.
-      */
 
       setTimeout(() => {
 
@@ -1895,83 +1405,69 @@
           block: "center"
         });
 
-      }, 300);
+      }, 150);
 
     }
 
 
 
-    /* =====================================
-       CONFETTI / EMOJI CELEBRATION
-    ====================================== */
+    /* =========================================================
+       EMOJI CONFETTI
+       ========================================================= */
 
-    function celebrate(
-      emojis
-    ) {
+    function celebrate() {
+
+      const emojis = [
+        "🎉",
+        "🎊",
+        "🥳",
+        "🎂",
+        "❤️",
+        "👑",
+        "✨",
+        "😂",
+        "🏝️",
+        "🍕",
+        "🥤"
+      ];
 
 
-      for (
-        let i = 0;
-        i < 25;
-        i++
-      ) {
-
+      for (let i = 0; i < 35; i++) {
 
         const item =
-          document.createElement(
-            "div"
-          );
-
+          document.createElement("div");
 
         item.className =
-          "mini-confetti";
-
+          "emoji-confetti";
 
         item.textContent =
           emojis[
             Math.floor(
-              Math.random() *
-              emojis.length
+              Math.random() * emojis.length
             )
           ];
 
 
-        item.style.setProperty(
-          "--x",
-          (
-            Math.random() *
-            700 -
-            350
-          ) + "px"
-        );
-
-
-        item.style.setProperty(
-          "--y",
-          (
-            Math.random() *
-            600 -
-            300
-          ) + "px"
-        );
+        item.style.left =
+          Math.random() * 100 + "vw";
 
 
         item.style.animationDelay =
-          (
-            Math.random() *
-            .25
-          ) + "s";
+          Math.random() * 0.8 + "s";
 
 
-        document.body.appendChild(
-          item
-        );
+        item.style.fontSize =
+          (18 + Math.random() * 20) + "px";
 
 
-        setTimeout(
-          () => item.remove(),
-          1600
-        );
+        document.body.appendChild(item);
+
+
+        setTimeout(() => {
+
+          item.remove();
+
+        }, 3500);
 
       }
 
@@ -1980,15 +1476,5 @@
   </script>
 
 
-
-  <!-- ================================================= -->
-  <!-- EXISTING WEBSITE JAVASCRIPT -->
-  <!-- ================================================= -->
-
-  <script src="script.js">
-  </script>
-
-
 </body>
-
 </html>
