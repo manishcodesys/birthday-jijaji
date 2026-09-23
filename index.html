@@ -4,163 +4,563 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Jijaaajii! 🎉</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
   <div id="partyLayer" aria-hidden="true"></div>
 
+  <!-- HERO -->
   <header class="hero">
     <div class="hero-glow"></div>
+
     <div class="hero-content">
-      <div class="eyebrow">A little birthday surprise made just for you ✨</div>
-      <h1>Happy Birthday<br><span>Jijaaajii! 🎂</span></h1>
-      <p class="hero-sub">Today is all about celebrating the wonderful person you are.</p>
-      <button class="scroll-btn" onclick="document.querySelector('#wishes').scrollIntoView({behavior:'smooth'})">
+      <div class="eyebrow">
+        A little birthday surprise made just for you ✨
+      </div>
+
+      <h1>
+        Happy Birthday<br>
+        <span>Jijaaajii! 🎂</span>
+      </h1>
+
+      <p class="hero-sub">
+        Today is all about celebrating the wonderful person you are.
+      </p>
+
+      <button
+        class="scroll-btn"
+        onclick="document.querySelector('#wishes').scrollIntoView({behavior:'smooth'})">
         Let the celebration begin ↓
       </button>
     </div>
   </header>
 
+
   <main>
+
+    <!-- WISHES SECTION -->
     <section id="wishes" class="section">
+
       <div class="section-heading">
         <span class="section-kicker">BLOCK 01</span>
+
         <h2>My Wishes For You 💛</h2>
-        <p>A few very important facts about our favourite Jijaji...</p>
+
+        <p>
+          A few very important facts about our favourite Jijaji...
+        </p>
       </div>
+
 
       <div class="wish-grid">
-        <article class="wish-card c1"><span class="number">01</span><div>🌸</div><h3>1 Phool 2 Phool</h3><p>Jiju Humare <strong>Beautiful!</strong></p></article>
-        <article class="wish-card c2"><span class="number">02</span><div>🥂</div><h3>1 Katori 2 Glass</h3><p>Jiju Humare <strong>First Class!</strong></p></article>
-        <article class="wish-card c3"><span class="number">03</span><div>📱</div><h3>iPhone ho yaa Samsung</h3><p>Jiju Humare <strong>Handsome!</strong></p></article>
-        <article class="wish-card c4"><span class="number">04</span><div>🥤</div><h3>Cola Cola hoo yaa Frooti</h3><p>Jiju Humare <strong>Cutiee!</strong></p></article>
+
+        <article class="wish-card c1">
+          <span class="number">01</span>
+          <div>🌸</div>
+          <h3>1 Phool 2 Phool</h3>
+          <p>
+            Jiju Humare <strong>Beautiful!</strong>
+          </p>
+        </article>
+
+
+        <article class="wish-card c2">
+          <span class="number">02</span>
+          <div>🥂</div>
+          <h3>1 Katori 2 Glass</h3>
+          <p>
+            Jiju Humare <strong>First Class!</strong>
+          </p>
+        </article>
+
+
+        <article class="wish-card c3">
+          <span class="number">03</span>
+          <div>📱</div>
+          <h3>iPhone ho yaa Samsung</h3>
+          <p>
+            Jiju Humare <strong>Handsome!</strong>
+          </p>
+        </article>
+
+
+        <article class="wish-card c4">
+          <span class="number">04</span>
+          <div>🥤</div>
+          <h3>Cola Cola hoo yaa Frooti</h3>
+          <p>
+            Jiju Humare <strong>Cutiee!</strong>
+          </p>
+        </article>
+
       </div>
 
+
+      <!-- RAJA CARD -->
       <button class="raja-card" onclick="openRaja()">
-        <div class="sparkle-orbit">✨</div>
-        <div class="raja-photo"><img src="assets/jiju-1.jpg" alt="Jijaji"></div>
-        <div>
-          <span class="mini-label">THE FINAL VERDICT 👑</span>
-          <h3>1 Tamatar Taaza Hai,<br>Jiju Humare Raja Haiii! 👑</h3>
-          <p>Click me for the full royal celebration!</p>
+
+        <div class="sparkle-orbit">
+          ✨
         </div>
-        <span class="arrow">→</span>
+
+        <div class="raja-photo">
+          <img
+            src="assets/jiju-1.jpg"
+            alt="Jijaji">
+        </div>
+
+        <div>
+          <span class="mini-label">
+            THE FINAL VERDICT 👑
+          </span>
+
+          <h3>
+            1 Tamatar Taaza Hai,<br>
+            Jiju Humare Raja Haiii! 👑
+          </h3>
+
+          <p>
+            Click me for the full royal celebration!
+          </p>
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
       </button>
+
     </section>
 
+
+    <!-- SURPRISE BOXES -->
     <section class="section surprises">
+
       <div class="section-heading">
-        <span class="section-kicker">BLOCK 02</span>
-        <h2>Open One Box For Surprise 🎁</h2>
-        <p>Choose carefully... or don't. There are surprises hiding everywhere.</p>
+
+        <span class="section-kicker">
+          BLOCK 02
+        </span>
+
+        <h2>
+          Open One Box For Surprise 🎁
+        </h2>
+
+        <p>
+          Choose carefully... or don't.
+          There are surprises hiding everywhere.
+        </p>
+
       </div>
+
 
       <div class="surprise-grid">
-        <button class="surprise-box memory" onclick="openModal('memoryModal')">
-          <span class="box-icon">📸</span>
-          <span class="box-tag">MEMORIES</span>
-          <h3>For My Favourite Jijaji</h3>
-          <p>Open the memory box →</p>
+
+        <!-- MEMORY -->
+        <button
+          class="surprise-box memory"
+          onclick="openModal('memoryModal')">
+
+          <span class="box-icon">
+            📸
+          </span>
+
+          <span class="box-tag">
+            MEMORIES
+          </span>
+
+          <h3>
+            For My Favourite Jijaji
+          </h3>
+
+          <p>
+            Open the memory box →
+          </p>
+
         </button>
 
-        <button class="surprise-box resort" onclick="openModal('resortModal')">
-          <span class="box-icon">🏝️</span>
-          <span class="box-tag">SECRET PLAN</span>
-          <h3>One Very Important Plan</h3>
-          <p>Open the plan box →</p>
+
+        <!-- RESORT -->
+        <button
+          class="surprise-box resort"
+          onclick="openModal('resortModal')">
+
+          <span class="box-icon">
+            🏝️
+          </span>
+
+          <span class="box-tag">
+            SECRET PLAN
+          </span>
+
+          <h3>
+            One Very Important Plan
+          </h3>
+
+          <p>
+            Open the plan box →
+          </p>
+
         </button>
 
-        <button class="surprise-box treat" onclick="openModal('treatModal')">
-          <span class="box-icon">🎁</span>
-          <span class="box-tag">BIRTHDAY TREAT</span>
-          <h3>Choose Your Treat</h3>
-          <p>Click for your options →</p>
+
+        <!-- TREAT -->
+        <button
+          class="surprise-box treat"
+          onclick="openModal('treatModal')">
+
+          <span class="box-icon">
+            🎁
+          </span>
+
+          <span class="box-tag">
+            BIRTHDAY TREAT
+          </span>
+
+          <h3>
+            Choose Your Treat
+          </h3>
+
+          <p>
+            Click for your options →
+          </p>
+
         </button>
+
       </div>
+
     </section>
+
+
+    <!-- =============================== -->
+    <!-- BIRTHDAY VIDEO SECTION -->
+    <!-- =============================== -->
 
     <section class="video-section section">
+
       <div class="video-card">
-        <span class="section-kicker">BONUS SURPRISE</span>
-        <h2>And because one surprise is never enough... 🎬</h2>
-        <p>Add your special birthday video here.</p>
-        <video controls poster="assets/video-poster.jpg">
-          <source src="assets/birthday-video.mp4" type="video/mp4">
-          Your browser does not support the video tag.
+
+        <span class="section-kicker">
+          BONUS SURPRISE 🎬
+        </span>
+
+        <h2>
+          And because one surprise is never enough... ❤️
+        </h2>
+
+        <p>
+          We made a little something special for you.
+          Sit back, relax and enjoy! 🥳
+        </p>
+
+
+        <!-- VIDEO -->
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          width="100%">
+
+          <source
+            src="assets/birthday-video.mp4"
+            type="video/mp4">
+
+          Sorry, your browser does not support the video tag.
+
         </video>
-        <small>Replace <b>assets/birthday-video.mp4</b> with your own video.</small>
+
+
+        <p class="video-caption">
+          🎂 Happy Birthday, Jijaji! 🎉
+        </p>
+
       </div>
+
     </section>
+
   </main>
 
+
+  <!-- FOOTER -->
   <footer>
-    <div>Made with lots of love, laughter &amp; thodi si masti ❤️</div>
-    <div>Happy Birthday, Jijaaajii! 🎉</div>
+
+    <div>
+      Made with lots of love, laughter &amp; thodi si masti ❤️
+    </div>
+
+    <div>
+      Happy Birthday, Jijaaajii! 🎉
+    </div>
+
   </footer>
 
-  <!-- Raja Modal -->
-  <div class="modal" id="rajaModal" onclick="closeOnBackdrop(event, 'rajaModal')">
+
+
+  <!-- =============================== -->
+  <!-- RAJA MODAL -->
+  <!-- =============================== -->
+
+  <div
+    class="modal"
+    id="rajaModal"
+    onclick="closeOnBackdrop(event, 'rajaModal')">
+
     <div class="modal-content glitter">
-      <button class="close" onclick="closeModal('rajaModal')">×</button>
-      <div class="cracker">🎇 ✨ 🎆 ✨ 🎇</div>
-      <img class="modal-main-photo" src="assets/jiju-1.jpg" alt="Jijaji">
-      <h2>1 Tamatar Taaza Hai,<br>Jiju Humare Raja Haiii! 👑</h2>
-      <p>Royal treatment unlocked. May your year be as शानदार as you are!</p>
-      <div class="confetti-line">🎊 🎉 ✨ 🥳 ✨ 🎉 🎊</div>
+
+      <button
+        class="close"
+        onclick="closeModal('rajaModal')">
+        ×
+      </button>
+
+      <div class="cracker">
+        🎇 ✨ 🎆 ✨ 🎇
+      </div>
+
+      <img
+        class="modal-main-photo"
+        src="assets/jiju-1.jpg"
+        alt="Jijaji">
+
+      <h2>
+        1 Tamatar Taaza Hai,<br>
+        Jiju Humare Raja Haiii! 👑
+      </h2>
+
+      <p>
+        Royal treatment unlocked.
+        May your year be as शानदार as you are!
+      </p>
+
+      <div class="confetti-line">
+        🎊 🎉 ✨ 🥳 ✨ 🎉 🎊
+      </div>
+
     </div>
+
   </div>
 
-  <!-- Memory Modal -->
-  <div class="modal" id="memoryModal" onclick="closeOnBackdrop(event, 'memoryModal')">
+
+
+  <!-- =============================== -->
+  <!-- MEMORY MODAL -->
+  <!-- =============================== -->
+
+  <div
+    class="modal"
+    id="memoryModal"
+    onclick="closeOnBackdrop(event, 'memoryModal')">
+
     <div class="modal-content wide">
-      <button class="close" onclick="closeModal('memoryModal')">×</button>
-      <span class="section-kicker">A MESSAGE FOR YOU</span>
-      <h2>Happy Birthday, dear Jiju! 💛</h2>
+
+      <button
+        class="close"
+        onclick="closeModal('memoryModal')">
+        ×
+      </button>
+
+      <span class="section-kicker">
+        A MESSAGE FOR YOU
+      </span>
+
+      <h2>
+        Happy Birthday, dear Jiju! 💛
+      </h2>
+
+
       <div class="photo-grid">
-        <img src="assets/jiju-1.jpg" alt="Memory 1">
-        <img src="assets/jiju-2.jpg" alt="Memory 2">
-        <img src="assets/jiju-3.jpg" alt="Memory 3">
-        <img src="assets/jiju-4.jpg" alt="Memory 4">
+
+        <img
+          src="assets/jiju-1.jpg"
+          alt="Memory 1">
+
+        <img
+          src="assets/jiju-2.jpg"
+          alt="Memory 2">
+
+        <img
+          src="assets/jiju-3.jpg"
+          alt="Memory 3">
+
+        <img
+          src="assets/jiju-4.jpg"
+          alt="Memory 4">
+
       </div>
-      <p class="big-message">May your special day bring you countless happiness, endless joy, and all the success you deserve.</p>
-      <p>Your presence brings so much warmth and positivity to our family. Thank you for always being such a wonderful human being! ❤️</p>
+
+
+      <p class="big-message">
+        May your special day bring you countless happiness,
+        endless joy, and all the success you deserve.
+      </p>
+
+      <p>
+        Your presence brings so much warmth and positivity
+        to our family. Thank you for always being such a
+        wonderful human being! ❤️
+      </p>
+
     </div>
+
   </div>
 
-  <!-- Resort Modal -->
-  <div class="modal" id="resortModal" onclick="closeOnBackdrop(event, 'resortModal')">
+
+
+  <!-- =============================== -->
+  <!-- RESORT MODAL -->
+  <!-- =============================== -->
+
+  <div
+    class="modal"
+    id="resortModal"
+    onclick="closeOnBackdrop(event, 'resortModal')">
+
     <div class="modal-content wide">
-      <button class="close" onclick="closeModal('resortModal')">×</button>
-      <span class="section-kicker">SECRET PLAN UNLOCKED 🏝️</span>
-      <h2>Plan resort trip very very soon! 🌴</h2>
-      <p class="big-message">We all are waiting. No excuses. 😎</p>
+
+      <button
+        class="close"
+        onclick="closeModal('resortModal')">
+        ×
+      </button>
+
+      <span class="section-kicker">
+        SECRET PLAN UNLOCKED 🏝️
+      </span>
+
+      <h2>
+        Plan resort trip very very soon! 🌴
+      </h2>
+
+      <p class="big-message">
+        We all are waiting. No excuses. 😎
+      </p>
+
+
       <div class="resort-grid">
-        <img src="assets/resort-1.jpg" alt="Resort">
-        <img src="assets/pool-1.jpg" alt="Swimming pool">
+
+        <img
+          src="assets/resort-1.jpg"
+          alt="Resort">
+
+        <img
+          src="assets/pool-1.jpg"
+          alt="Swimming pool">
+
       </div>
-      <p>Pool, food, sunshine, masti — let's make it happen soon! 🥳</p>
+
+
+      <p>
+        Pool, food, sunshine, masti —
+        let's make it happen soon! 🥳
+      </p>
+
     </div>
+
   </div>
 
-  <!-- Treat Modal -->
-  <div class="modal" id="treatModal" onclick="closeOnBackdrop(event, 'treatModal')">
+
+
+  <!-- =============================== -->
+  <!-- TREAT MODAL -->
+  <!-- =============================== -->
+
+  <div
+    class="modal"
+    id="treatModal"
+    onclick="closeOnBackdrop(event, 'treatModal')">
+
     <div class="modal-content wide">
-      <button class="close" onclick="closeModal('treatModal')">×</button>
-      <span class="section-kicker">CHOOSE ONE 🎁</span>
-      <h2>Choose one option for your birthday treat!</h2>
-      <p>Click any one. Your wish is our command. 😄</p>
+
+      <button
+        class="close"
+        onclick="closeModal('treatModal')">
+        ×
+      </button>
+
+      <span class="section-kicker">
+        CHOOSE ONE 🎁
+      </span>
+
+      <h2>
+        Choose one option for your birthday treat!
+      </h2>
+
+      <p>
+        Click any one. Your wish is our command. 😄
+      </p>
+
+
       <div class="treat-grid">
-        <button onclick="claimTreat('cake')"><img src="assets/cake.jpg" alt="Cake"><span>🎂 You have got a Cake!</span></button>
-        <button onclick="claimTreat('pizza')"><img src="assets/pizza.jpg" alt="Pizza"><span>🍕 You have got a Pizza!<small>Call me with your favourite pizza — I will order.</small></span></button>
-        <button onclick="claimTreat('shake')"><img src="assets/shake.jpg" alt="Milkshake"><span>🥤 You have got a Milk Shake!<small>Call me to order your favourite milk shake.</small></span></button>
+
+        <button onclick="claimTreat('cake')">
+
+          <img
+            src="assets/cake.jpg"
+            alt="Cake">
+
+          <span>
+            🎂 You have got a Cake!
+          </span>
+
+        </button>
+
+
+        <button onclick="claimTreat('pizza')">
+
+          <img
+            src="assets/pizza.jpg"
+            alt="Pizza">
+
+          <span>
+            🍕 You have got a Pizza!
+
+            <small>
+              Call me with your favourite pizza —
+              I will order.
+            </small>
+
+          </span>
+
+        </button>
+
+
+        <button onclick="claimTreat('shake')">
+
+          <img
+            src="assets/shake.jpg"
+            alt="Milkshake">
+
+          <span>
+            🥤 You have got a Milk Shake!
+
+            <small>
+              Call me to order your favourite
+              milk shake.
+            </small>
+
+          </span>
+
+        </button>
+
       </div>
+
+
       <div id="treatResult"></div>
+
     </div>
+
   </div>
 
+
+  <!-- JAVASCRIPT -->
   <script src="script.js"></script>
+
 </body>
 </html>
