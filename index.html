@@ -3,133 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Happy Birthday Jijaaajii! 🎉</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
+
+  <!-- ================================================= -->
+  <!-- BACKGROUND PARTY ANIMATION -->
+  <!-- ================================================= -->
 
   <div id="partyLayer" aria-hidden="true"></div>
 
-  <!-- HERO -->
+
+  <!-- ================================================= -->
+  <!-- BIRTHDAY MUSIC -->
+  <!-- ================================================= -->
+
+  <audio id="birthdayMusic" preload="auto">
+    <source src="assets/birthday-music.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <!-- ================================================= -->
+  <!-- MUSIC CONTROL -->
+  <!-- ================================================= -->
+
+  <button
+    id="musicToggle"
+    onclick="toggleMusic()"
+    aria-label="Toggle birthday music">
+
+    🎵 Music ON
+
+  </button>
+
+
+
+  <!-- ================================================= -->
+  <!-- HERO / FIRST PAGE -->
+  <!-- ================================================= -->
+
   <header class="hero">
+
     <div class="hero-glow"></div>
 
+
     <div class="hero-content">
+
       <div class="eyebrow">
         A little birthday surprise made just for you ✨
       </div>
+
 
       <h1>
         Happy Birthday<br>
         <span>Jijaaajii! 🎂</span>
       </h1>
 
+
       <p class="hero-sub">
         Today is all about celebrating the wonderful person you are.
       </p>
 
+
       <button
         class="scroll-btn"
-        onclick="document.querySelector('#wishes').scrollIntoView({behavior:'smooth'})">
+        onclick="startBirthday()">
+
         Let the celebration begin ↓
+
       </button>
+
     </div>
+
   </header>
+
 
 
   <main>
 
+
+    <!-- ================================================= -->
     <!-- WISHES SECTION -->
-    <section id="wishes" class="section">
+    <!-- ================================================= -->
+
+    <section
+      id="wishes"
+      class="section">
+
 
       <div class="section-heading">
-        <span class="section-kicker">BLOCK 01</span>
 
-        <h2>My Wishes For You 💛</h2>
+        <span class="section-kicker">
+          BLOCK 01
+        </span>
+
+
+        <h2>
+          My Wishes For You 💛
+        </h2>
+
 
         <p>
           A few very important facts about our favourite Jijaji...
         </p>
+
       </div>
+
 
 
       <div class="wish-grid">
 
+
+        <!-- WISH 1 -->
+
         <article class="wish-card c1">
-          <span class="number">01</span>
-          <div>🌸</div>
-          <h3>1 Phool 2 Phool</h3>
+
+          <span class="number">
+            01
+          </span>
+
+          <div>
+            🌸
+          </div>
+
+          <h3>
+            1 Phool 2 Phool
+          </h3>
+
           <p>
-            Jiju Humare <strong>Beautiful!</strong>
+            Jiju Humare
+            <strong>
+              Beautiful!
+            </strong>
           </p>
+
         </article>
 
+
+
+        <!-- WISH 2 -->
 
         <article class="wish-card c2">
-          <span class="number">02</span>
-          <div>🥂</div>
-          <h3>1 Katori 2 Glass</h3>
+
+          <span class="number">
+            02
+          </span>
+
+          <div>
+            🥂
+          </div>
+
+          <h3>
+            1 Katori 2 Glass
+          </h3>
+
           <p>
-            Jiju Humare <strong>First Class!</strong>
+            Jiju Humare
+            <strong>
+              First Class!
+            </strong>
           </p>
+
         </article>
 
+
+
+        <!-- WISH 3 -->
 
         <article class="wish-card c3">
-          <span class="number">03</span>
-          <div>📱</div>
-          <h3>iPhone ho yaa Samsung</h3>
+
+          <span class="number">
+            03
+          </span>
+
+          <div>
+            📱
+          </div>
+
+          <h3>
+            iPhone ho yaa Samsung
+          </h3>
+
           <p>
-            Jiju Humare <strong>Handsome!</strong>
+            Jiju Humare
+            <strong>
+              Handsome!
+            </strong>
           </p>
+
         </article>
 
 
+
+        <!-- WISH 4 -->
+
         <article class="wish-card c4">
-          <span class="number">04</span>
-          <div>🥤</div>
-          <h3>Cola Cola hoo yaa Frooti</h3>
+
+          <span class="number">
+            04
+          </span>
+
+          <div>
+            🥤
+          </div>
+
+          <h3>
+            Cola Cola hoo yaa Frooti
+          </h3>
+
           <p>
-            Jiju Humare <strong>Cutiee!</strong>
+            Jiju Humare
+            <strong>
+              Cutiee!
+            </strong>
           </p>
+
         </article>
 
       </div>
 
 
+
+      <!-- ================================================= -->
       <!-- RAJA CARD -->
-      <button class="raja-card" onclick="openRaja()">
+      <!-- ================================================= -->
+
+      <button
+        class="raja-card"
+        onclick="openRaja()">
+
 
         <div class="sparkle-orbit">
           ✨
         </div>
 
+
         <div class="raja-photo">
+
           <img
             src="assets/jiju-1.jpg"
             alt="Jijaji">
+
         </div>
 
+
         <div>
+
           <span class="mini-label">
             THE FINAL VERDICT 👑
           </span>
+
 
           <h3>
             1 Tamatar Taaza Hai,<br>
             Jiju Humare Raja Haiii! 👑
           </h3>
 
+
           <p>
             Click me for the full royal celebration!
           </p>
+
         </div>
+
 
         <span class="arrow">
           →
@@ -140,8 +289,14 @@
     </section>
 
 
+
+    <!-- ================================================= -->
     <!-- SURPRISE BOXES -->
-    <section class="section surprises">
+    <!-- ================================================= -->
+
+    <section
+      class="section surprises">
+
 
       <div class="section-heading">
 
@@ -149,9 +304,11 @@
           BLOCK 02
         </span>
 
+
         <h2>
           Open One Box For Surprise 🎁
         </h2>
+
 
         <p>
           Choose carefully... or don't.
@@ -161,9 +318,12 @@
       </div>
 
 
+
       <div class="surprise-grid">
 
-        <!-- MEMORY -->
+
+        <!-- MEMORY BOX -->
+
         <button
           class="surprise-box memory"
           onclick="openModal('memoryModal')">
@@ -172,13 +332,16 @@
             📸
           </span>
 
+
           <span class="box-tag">
             MEMORIES
           </span>
 
+
           <h3>
             For My Favourite Jijaji
           </h3>
+
 
           <p>
             Open the memory box →
@@ -187,7 +350,9 @@
         </button>
 
 
-        <!-- RESORT -->
+
+        <!-- RESORT BOX -->
+
         <button
           class="surprise-box resort"
           onclick="openModal('resortModal')">
@@ -196,13 +361,16 @@
             🏝️
           </span>
 
+
           <span class="box-tag">
             SECRET PLAN
           </span>
 
+
           <h3>
             One Very Important Plan
           </h3>
+
 
           <p>
             Open the plan box →
@@ -211,7 +379,9 @@
         </button>
 
 
-        <!-- TREAT -->
+
+        <!-- TREAT BOX -->
+
         <button
           class="surprise-box treat"
           onclick="openModal('treatModal')">
@@ -220,13 +390,16 @@
             🎁
           </span>
 
+
           <span class="box-tag">
             BIRTHDAY TREAT
           </span>
 
+
           <h3>
             Choose Your Treat
           </h3>
+
 
           <p>
             Click for your options →
@@ -239,21 +412,27 @@
     </section>
 
 
-    <!-- =============================== -->
-    <!-- BIRTHDAY VIDEO SECTION -->
-    <!-- =============================== -->
 
-    <section class="video-section section">
+    <!-- ================================================= -->
+    <!-- VIDEO SECTION -->
+    <!-- ================================================= -->
+
+    <section
+      class="video-section section">
+
 
       <div class="video-card">
+
 
         <span class="section-kicker">
           BONUS SURPRISE 🎬
         </span>
 
+
         <h2>
           And because one surprise is never enough... ❤️
         </h2>
+
 
         <p>
           We made a little something special for you.
@@ -261,7 +440,9 @@
         </p>
 
 
-        <!-- VIDEO -->
+
+        <!-- BIRTHDAY VIDEO -->
+
         <video
           controls
           playsinline
@@ -288,12 +469,17 @@
   </main>
 
 
+
+  <!-- ================================================= -->
   <!-- FOOTER -->
+  <!-- ================================================= -->
+
   <footer>
 
     <div>
       Made with lots of love, laughter &amp; thodi si masti ❤️
     </div>
+
 
     <div>
       Happy Birthday, Jijaaajii! 🎉
@@ -303,41 +489,50 @@
 
 
 
-  <!-- =============================== -->
+  <!-- ================================================= -->
   <!-- RAJA MODAL -->
-  <!-- =============================== -->
+  <!-- ================================================= -->
 
   <div
     class="modal"
     id="rajaModal"
     onclick="closeOnBackdrop(event, 'rajaModal')">
 
+
     <div class="modal-content glitter">
+
 
       <button
         class="close"
         onclick="closeModal('rajaModal')">
+
         ×
+
       </button>
+
 
       <div class="cracker">
         🎇 ✨ 🎆 ✨ 🎇
       </div>
+
 
       <img
         class="modal-main-photo"
         src="assets/jiju-1.jpg"
         alt="Jijaji">
 
+
       <h2>
         1 Tamatar Taaza Hai,<br>
         Jiju Humare Raja Haiii! 👑
       </h2>
 
+
       <p>
         Royal treatment unlocked.
         May your year be as शानदार as you are!
       </p>
+
 
       <div class="confetti-line">
         🎊 🎉 ✨ 🥳 ✨ 🎉 🎊
@@ -349,45 +544,56 @@
 
 
 
-  <!-- =============================== -->
+  <!-- ================================================= -->
   <!-- MEMORY MODAL -->
-  <!-- =============================== -->
+  <!-- ================================================= -->
 
   <div
     class="modal"
     id="memoryModal"
     onclick="closeOnBackdrop(event, 'memoryModal')">
 
+
     <div class="modal-content wide">
+
 
       <button
         class="close"
         onclick="closeModal('memoryModal')">
+
         ×
+
       </button>
+
 
       <span class="section-kicker">
         A MESSAGE FOR YOU
       </span>
+
 
       <h2>
         Happy Birthday, dear Jiju! 💛
       </h2>
 
 
+
       <div class="photo-grid">
+
 
         <img
           src="assets/jiju-1.jpg"
           alt="Memory 1">
 
+
         <img
           src="assets/jiju-2.jpg"
           alt="Memory 2">
 
+
         <img
           src="assets/jiju-3.jpg"
           alt="Memory 3">
+
 
         <img
           src="assets/jiju-4.jpg"
@@ -396,10 +602,12 @@
       </div>
 
 
+
       <p class="big-message">
         May your special day bring you countless happiness,
         endless joy, and all the success you deserve.
       </p>
+
 
       <p>
         Your presence brings so much warmth and positivity
@@ -413,47 +621,58 @@
 
 
 
-  <!-- =============================== -->
+  <!-- ================================================= -->
   <!-- RESORT MODAL -->
-  <!-- =============================== -->
+  <!-- ================================================= -->
 
   <div
     class="modal"
     id="resortModal"
     onclick="closeOnBackdrop(event, 'resortModal')">
 
+
     <div class="modal-content wide">
+
 
       <button
         class="close"
         onclick="closeModal('resortModal')">
+
         ×
+
       </button>
+
 
       <span class="section-kicker">
         SECRET PLAN UNLOCKED 🏝️
       </span>
 
+
       <h2>
         Plan resort trip very very soon! 🌴
       </h2>
+
 
       <p class="big-message">
         We all are waiting. No excuses. 😎
       </p>
 
 
+
       <div class="resort-grid">
+
 
         <img
           src="assets/resort-1.jpg"
           alt="Resort">
+
 
         <img
           src="assets/pool-1.jpg"
           alt="Swimming pool">
 
       </div>
+
 
 
       <p>
@@ -467,43 +686,55 @@
 
 
 
-  <!-- =============================== -->
+  <!-- ================================================= -->
   <!-- TREAT MODAL -->
-  <!-- =============================== -->
+  <!-- ================================================= -->
 
   <div
     class="modal"
     id="treatModal"
     onclick="closeOnBackdrop(event, 'treatModal')">
 
+
     <div class="modal-content wide">
+
 
       <button
         class="close"
         onclick="closeModal('treatModal')">
+
         ×
+
       </button>
+
 
       <span class="section-kicker">
         CHOOSE ONE 🎁
       </span>
 
+
       <h2>
         Choose one option for your birthday treat!
       </h2>
+
 
       <p>
         Click any one. Your wish is our command. 😄
       </p>
 
 
+
       <div class="treat-grid">
+
+
+        <!-- CAKE -->
 
         <button onclick="claimTreat('cake')">
 
           <img
             src="assets/cake.jpg"
             alt="Cake">
+
 
           <span>
             🎂 You have got a Cake!
@@ -512,13 +743,18 @@
         </button>
 
 
+
+        <!-- PIZZA -->
+
         <button onclick="claimTreat('pizza')">
 
           <img
             src="assets/pizza.jpg"
             alt="Pizza">
 
+
           <span>
+
             🍕 You have got a Pizza!
 
             <small>
@@ -531,13 +767,18 @@
         </button>
 
 
+
+        <!-- MILKSHAKE -->
+
         <button onclick="claimTreat('shake')">
 
           <img
             src="assets/shake.jpg"
             alt="Milkshake">
 
+
           <span>
+
             🥤 You have got a Milk Shake!
 
             <small>
@@ -552,6 +793,7 @@
       </div>
 
 
+
       <div id="treatResult"></div>
 
     </div>
@@ -559,8 +801,137 @@
   </div>
 
 
-  <!-- JAVASCRIPT -->
+
+  <!-- ================================================= -->
+  <!-- MUSIC JAVASCRIPT -->
+  <!-- ================================================= -->
+
+  <script>
+
+    const birthdayMusic =
+      document.getElementById("birthdayMusic");
+
+    const musicToggle =
+      document.getElementById("musicToggle");
+
+
+    let musicStarted = false;
+
+
+
+    /*
+      Start birthday music when the visitor
+      clicks the first celebration button.
+    */
+
+    function startBirthday() {
+
+      birthdayMusic.volume = 0.35;
+
+      birthdayMusic.play()
+        .then(() => {
+
+          musicStarted = true;
+
+          musicToggle.textContent =
+            "🎵 Music ON";
+
+        })
+        .catch((error) => {
+
+          console.log(
+            "Music could not start:",
+            error
+          );
+
+        });
+
+
+      document
+        .querySelector("#wishes")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+    }
+
+
+
+    /*
+      Music ON / OFF button
+    */
+
+    function toggleMusic() {
+
+      if (birthdayMusic.paused) {
+
+        birthdayMusic.play()
+          .then(() => {
+
+            musicStarted = true;
+
+            musicToggle.textContent =
+              "🎵 Music ON";
+
+          })
+          .catch((error) => {
+
+            console.log(
+              "Music could not start:",
+              error
+            );
+
+          });
+
+      }
+
+      else {
+
+        birthdayMusic.pause();
+
+        musicToggle.textContent =
+          "🔇 Music OFF";
+
+      }
+
+    }
+
+
+
+    /*
+      If the visitor returns to the website
+      after switching tabs, keep the music state.
+    */
+
+    document.addEventListener(
+      "visibilitychange",
+      function() {
+
+        if (
+          !document.hidden &&
+          musicStarted &&
+          birthdayMusic.paused
+        ) {
+
+          birthdayMusic.play()
+            .catch(() => {});
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+
+  <!-- ================================================= -->
+  <!-- EXISTING WEBSITE JAVASCRIPT -->
+  <!-- ================================================= -->
+
   <script src="script.js"></script>
 
+
 </body>
+
 </html>
